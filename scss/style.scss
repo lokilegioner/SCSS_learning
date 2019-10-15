@@ -1,0 +1,32 @@
+$main-color: yellow;
+$add-color: red;
+
+%flex-mode {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+%debug-borders {
+    border: 0px solid black;
+}
+
+.block {
+    @extend %debug-borders;
+    @extend %flex-mode;
+    background-color: $main-color;
+    min-height: 400px;
+    .col {
+        background-color: $add-color;
+    }
+}
+
+.col {
+    background-color: green;
+}
+
+.svg {
+    border: 1px solid black;
+    width: 100%;
+}

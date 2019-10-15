@@ -1,0 +1,35 @@
+.block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.block {
+  border: 0px solid black;
+}
+
+.block {
+  background-color: yellow;
+  min-height: 400px;
+}
+.block .col {
+  background-color: red;
+}
+
+.col {
+  background-color: green;
+}
+
+.svg {
+  border: 1px solid black;
+  width: 100%;
+}
