@@ -1,7 +1,62 @@
-.block {
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, .description {
+  font-family: Roboto Mono;
+  font-style: normal;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 32px;
+}
+
+h2 {
+  font-size: 30px;
+  line-height: 30px;
+}
+
+nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+}
+
+.link-font {
+  font-size: 20px;
+  line-height: 23px;
+}
+
+.description {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 28px;
+}
+
+.first-vector {
+  fill: #1B3CC8;
+  stroke: black;
+  stroke-width: 0;
+}
+
+.svg-first {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.cage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  margin: 23px auto;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -9,27 +64,59 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
-.block {
-  border: 0px solid black;
+.content {
+  position: relative;
+  margin: 3em auto;
+  width: 90%;
+}
+.content h1 {
+  color: white;
+  margin-bottom: 20px;
+}
+.content .description {
+  color: white;
 }
 
-.block {
-  background-color: yellow;
-  min-height: 400px;
-}
-.block .col {
-  background-color: red;
+.img-block {
+  display: block;
 }
 
-.col {
-  background-color: green;
+.drop-menu[open] {
+  margin-top: 2em;
+  margin-right: .8em;
 }
 
-.svg {
-  border: 1px solid black;
+.drop-menu-btn {
+  display: block;
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  outline-style: none;
+  background: url(../image-svg/icon-menu.svg);
+  width: 28px;
+  height: 25px;
+}
+
+.listBtn {
+  display: inline-block;
+  border: 0;
   width: 100%;
+  background: transparent;
+  font-size: 20px;
+  line-height: 30px;
+  text-decoration: none;
+  color: white;
+  text-align: right;
+}
+
+.listBtn:hover {
+  color: #bac4ee;
+  text-decoration: none;
+}
+
+.listBtn:focus {
+  outline-style: none;
+  color: #5f76d8;
 }

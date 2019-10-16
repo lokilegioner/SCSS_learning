@@ -1,32 +1,126 @@
-$main-color: yellow;
-$add-color: red;
+$bg-color: #1B3CC8;
+$bg-add-color: #164BC9;
+$hover-color: #bac4ee;
+$active-color: #5f76d8;
+$border-color: #164BC9;
 
-%flex-mode {
+* {
+    margin: 0;
+    padding: 0;
+}
+
+%bold {
+    font-family: Roboto Mono;
+    font-style: normal;
+    font-weight: bold;
+}
+
+h1 {
+    @extend %bold;
+    font-size: 32px;
+    line-height: 32px;
+}
+
+h2 {
+    @extend %bold;
+    font-size: 30px;
+    line-height: 30px;
+}
+
+nav {
     display: flex;
+    position: relative;
+}
+
+.link-font {
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.description {
+    @extend %bold;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 28px;
+}
+
+.first-vector {
+    fill: $bg-color;
+    stroke: black;
+    stroke-width: 0;
+}
+
+.svg-first {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.cage {
+    display: flex;
+    width: 90%;
+    margin: 23px auto;
     flex-direction: row;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 
-%debug-borders {
-    border: 0px solid black;
-}
-
-.block {
-    @extend %debug-borders;
-    @extend %flex-mode;
-    background-color: $main-color;
-    min-height: 400px;
-    .col {
-        background-color: $add-color;
+.content {
+    position: relative;
+    margin: 3em auto;
+    width: 90%;
+    h1 {
+        color: white;
+        margin-bottom: 20px;
+    }
+    .description {
+        color: white;
     }
 }
 
-.col {
-    background-color: green;
+.img-block {
+    display: block;
 }
 
-.svg {
-    border: 1px solid black;
+.drop-menu {
+
+}
+
+.drop-menu[open] {
+    margin-top: 2em;
+    margin-right: .8em;
+}
+
+.drop-menu-btn {
+    display: block;
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    outline-style: none;
+    background: url(../image-svg/icon-menu.svg);
+    width: 28px;
+    height: 25px;
+}
+
+.listBtn {
+    display: inline-block;
+    border: 0;
     width: 100%;
+    background: transparent;
+    font-size: 20px;
+    line-height: 30px;
+    text-decoration: none;
+    color: white;
+    text-align: right;
+}
+
+.listBtn:hover {
+    color: $hover-color;
+    text-decoration: none;
+}
+
+.listBtn:focus {
+    outline-style: none;
+    color: $active-color;
 }
