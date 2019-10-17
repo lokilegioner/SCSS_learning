@@ -13,6 +13,8 @@ $border-color: #164BC9;
     font-family: Roboto Mono;
     font-style: normal;
     font-weight: bold;
+    text-decoration: none;
+    user-select: none;
 }
 
 h1 {
@@ -44,7 +46,7 @@ nav {
     line-height: 28px;
 }
 
-.first-vector {
+.morph-vector {
     fill: $bg-color;
     stroke: black;
     stroke-width: 0;
@@ -66,43 +68,98 @@ nav {
     justify-content: space-between;
 }
 
-.content {
-    position: relative;
-    margin: 3em auto;
-    width: 90%;
-    h1 {
-        color: white;
-        margin-bottom: 20px;
-    }
-    .description {
-        color: white;
-    }
-    .listBtn {
-        display: block;
-        border: 2px solid $border-color;
-        border-radius: 30px;
-        height: 50px;
-        width: 200px;
-        text-align: left;
-        padding-top: 7px;
-        padding-left: 20px;
+#for-drop-menu-js {
+    .content {
+        position: relative;
+        margin: 3em auto;
+        width: 90%;
+        h1 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        .description {
+            color: white;
+        }
+        .click-down {
+            display: inline-block;
+            background: transparent;
+            border: 2px solid $border-color;
+            border-radius: 50px;
+            height: 60px;
+            width: 205px;
+            text-decoration: none;
+            margin-bottom: 30px;
+            margin-top: 20px;
+            .click-down-text {
+                @extend %bold;
+                display: inline-block;
+                font-size: 20px;
+                line-height: 30px;
+                color: white;
+                text-align: left;
+                margin-top: 13px;
+                margin-left: 31px;
+            }
+        }
+        .img-block {
+            margin-top: 5px;
+            margin-left: 20px;
+        }
     }
 }
 
 .img-block {
+    display: inline-block;
+}
+
+.drop-menu-details {
     display: block;
 }
 
-.drop-menu {
+.drop-menu-js {
+    display: block;
+    position: absolute;
+    top: 2em;
+    right: 0px;
+    width: 200px;
+    background: transparent;
+}
+
+.drop-menu-js-hide {
     display: none;
 }
 
-.drop-menu[open] {
+.drop-menu-btn {
+    display: none;
+}
+
+@supports (-ms-ime-align: auto) {
+    .drop-menu-details {
+        display: none;
+    }
+    .drop-menu-btn {
+        display: block;
+        position: absolute;
+        top: 25px;
+        right: 20px;
+        outline-style: none;
+        background: url(../image-svg/icon-menu.svg);
+        width: 28px;
+        height: 23px;
+        cursor: pointer;
+    }
+  }
+
+details summary::-webkit-details-marker {
+    display: none;
+}
+
+.drop-menu-details[open] {
     margin-top: 2em;
     margin-right: .8em;
 }
 
-.drop-menu-btn {
+.drop-list {
     display: block;
     position: absolute;
     top: 25px;
@@ -118,11 +175,10 @@ nav {
     border: 0;
     width: 100%;
     background: transparent;
-    font-size: 20px;
-    line-height: 30px;
-    text-decoration: none;
+    @extend %bold;
     color: white;
     text-align: right;
+    user-select: none;
 }
 
 .listBtn:hover {
@@ -133,4 +189,55 @@ nav {
 .listBtn:focus {
     outline-style: none;
     color: $active-color;
+}
+
+.important-to-know {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .custom-row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 10px;
+    }
+    h2 {
+        color: black;
+        text-align: left;
+    }
+    .description {
+        color: black;
+        text-align: left;
+        width: 75%;
+    }
+    .img-block {
+        width: 20%;
+        padding-right: 5px;
+        text-align: center;
+    }
+}
+
+.algorithm-processing {
+    h2 {
+        margin-top: 150px;
+    }
+    .description {
+        width: 100%;
+    }
+}
+
+.cage-content {
+    color: white;
+    padding: 10px;
+    h2 {
+        margin-top: 150px;
+        margin-bottom: 20px;
+    }
+    .svg-first {
+        display: block;
+        position: absolute;
+        top: 1580px;
+        left: 0;
+        z-index: -1;
+    }
 }
