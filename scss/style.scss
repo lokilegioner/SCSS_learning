@@ -77,6 +77,16 @@ nav {
     .description {
         color: white;
     }
+    .listBtn {
+        display: block;
+        border: 2px solid $border-color;
+        border-radius: 30px;
+        height: 50px;
+        width: 200px;
+        text-align: left;
+        padding-top: 7px;
+        padding-left: 20px;
+    }
 }
 
 .img-block {
@@ -84,7 +94,7 @@ nav {
 }
 
 .drop-menu {
-
+    display: none;
 }
 
 .drop-menu[open] {
@@ -100,7 +110,7 @@ nav {
     outline-style: none;
     background: url(../image-svg/icon-menu.svg);
     width: 28px;
-    height: 25px;
+    height: 23px;
 }
 
 .listBtn {

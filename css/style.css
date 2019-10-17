@@ -1,92 +1,80 @@
 * {
   margin: 0;
-  padding: 0;
-}
+  padding: 0; }
 
 h1, h2, .description {
   font-family: Roboto Mono;
   font-style: normal;
-  font-weight: bold;
-}
+  font-weight: bold; }
 
 h1 {
   font-size: 32px;
-  line-height: 32px;
-}
+  line-height: 32px; }
 
 h2 {
   font-size: 30px;
-  line-height: 30px;
-}
+  line-height: 30px; }
 
 nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  position: relative;
-}
+  position: relative; }
 
 .link-font {
   font-size: 20px;
-  line-height: 23px;
-}
+  line-height: 23px; }
 
 .description {
   font-weight: 500;
   font-size: 14px;
-  line-height: 28px;
-}
+  line-height: 28px; }
 
 .first-vector {
   fill: #1B3CC8;
   stroke: black;
-  stroke-width: 0;
-}
+  stroke-width: 0; }
 
 .svg-first {
   display: block;
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
-}
+  z-index: -1; }
 
 .cage {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 90%;
   margin: 23px auto;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
+  flex-direction: row;
+  justify-content: space-between; }
 
 .content {
   position: relative;
   margin: 3em auto;
-  width: 90%;
-}
-.content h1 {
-  color: white;
-  margin-bottom: 20px;
-}
-.content .description {
-  color: white;
-}
+  width: 90%; }
+  .content h1 {
+    color: white;
+    margin-bottom: 20px; }
+  .content .description {
+    color: white; }
+  .content .listBtn {
+    display: block;
+    border: 2px solid #164BC9;
+    border-radius: 30px;
+    height: 50px;
+    width: 200px;
+    text-align: left;
+    padding-top: 7px;
+    padding-left: 20px; }
 
 .img-block {
-  display: block;
-}
+  display: block; }
+
+.drop-menu {
+  display: none; }
 
 .drop-menu[open] {
   margin-top: 2em;
-  margin-right: .8em;
-}
+  margin-right: .8em; }
 
 .drop-menu-btn {
   display: block;
@@ -96,8 +84,7 @@ nav {
   outline-style: none;
   background: url(../image-svg/icon-menu.svg);
   width: 28px;
-  height: 25px;
-}
+  height: 23px; }
 
 .listBtn {
   display: inline-block;
@@ -108,15 +95,14 @@ nav {
   line-height: 30px;
   text-decoration: none;
   color: white;
-  text-align: right;
-}
+  text-align: right; }
 
 .listBtn:hover {
   color: #bac4ee;
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 .listBtn:focus {
   outline-style: none;
-  color: #5f76d8;
-}
+  color: #5f76d8; }
+
+/*# sourceMappingURL=style.css.map */
