@@ -3,6 +3,7 @@ $bg-add-color: #164BC9;
 $hover-color: #bac4ee;
 $active-color: #5f76d8;
 $border-color: #164BC9;
+$input-placeholder-color: #8aa5e4;
 
 * {
     margin: 0;
@@ -346,6 +347,10 @@ details summary::-webkit-details-marker {
         font-weight: 500;
         font-size: 14px;
         line-height: 28px;
+
+    }
+    .windowInput::placeholder {
+        color: $input-placeholder-color;
     }
     .windowArea {
         display: flex;
@@ -368,6 +373,9 @@ details summary::-webkit-details-marker {
         resize: none;
         overflow: hidden;
         scrollbar-arrow-color: #0068AB;
+    }
+    .windowArea::placeholder {
+        color: $input-placeholder-color;
     }
     .svg-first {
         position: absolute;

@@ -357,6 +357,18 @@ details summary::-webkit-details-marker {
   font-size: 14px;
   line-height: 28px;
 }
+.form-contact-us .windowInput::-webkit-input-placeholder {
+  color: #8aa5e4;
+}
+.form-contact-us .windowInput:-ms-input-placeholder {
+  color: #8aa5e4;
+}
+.form-contact-us .windowInput::-ms-input-placeholder {
+  color: #8aa5e4;
+}
+.form-contact-us .windowInput::placeholder {
+  color: #8aa5e4;
+}
 .form-contact-us .windowArea {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -379,6 +391,18 @@ details summary::-webkit-details-marker {
   resize: none;
   overflow: hidden;
   scrollbar-arrow-color: #0068AB;
+}
+.form-contact-us .windowArea::-webkit-input-placeholder {
+  color: #8aa5e4;
+}
+.form-contact-us .windowArea:-ms-input-placeholder {
+  color: #8aa5e4;
+}
+.form-contact-us .windowArea::-ms-input-placeholder {
+  color: #8aa5e4;
+}
+.form-contact-us .windowArea::placeholder {
+  color: #8aa5e4;
 }
 .form-contact-us .svg-first {
   position: absolute;
