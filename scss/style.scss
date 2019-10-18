@@ -13,6 +13,7 @@ $border-color: #164BC9;
     font-family: Roboto Mono;
     font-style: normal;
     font-weight: bold;
+    letter-spacing: -0.03em;
     text-decoration: none;
     user-select: none;
 }
@@ -68,6 +69,28 @@ nav {
     justify-content: space-between;
 }
 
+.click-down {
+    display: inline-block;
+    background: transparent;
+    border: 2px solid $border-color;
+    border-radius: 50px;
+    height: 60px;
+    width: 205px;
+    text-decoration: none;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    .click-down-text {
+        @extend %bold;
+        display: inline-block;
+        font-size: 20px;
+        line-height: 30px;
+        color: white;
+        text-align: left;
+        margin-top: 13px;
+        margin-left: 31px;
+    }
+}
+
 #for-drop-menu-js {
     .content {
         position: relative;
@@ -79,27 +102,6 @@ nav {
         }
         .description {
             color: white;
-        }
-        .click-down {
-            display: inline-block;
-            background: transparent;
-            border: 2px solid $border-color;
-            border-radius: 50px;
-            height: 60px;
-            width: 205px;
-            text-decoration: none;
-            margin-bottom: 30px;
-            margin-top: 20px;
-            .click-down-text {
-                @extend %bold;
-                display: inline-block;
-                font-size: 20px;
-                line-height: 30px;
-                color: white;
-                text-align: left;
-                margin-top: 13px;
-                margin-left: 31px;
-            }
         }
         .img-block {
             margin-top: 5px;
@@ -199,7 +201,6 @@ details summary::-webkit-details-marker {
         display: flex;
         flex-direction: row;
         align-items: center;
-        padding: 10px;
     }
     h2 {
         color: black;
@@ -224,6 +225,26 @@ details summary::-webkit-details-marker {
     .description {
         width: 100%;
     }
+    .custom-row {
+        .svg-diagram {
+            display: block;
+            position: relative;
+            .svg-text {
+                @extend %bold;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 16px;
+                fill: black;
+                stroke: black;
+                stroke-width: 0;
+            }
+            .space-border {
+                fill: none;
+                stroke: #E0E0E0;
+                stroke-width: 3;
+            }
+        }
+    }   
 }
 
 .cage-content {
@@ -241,3 +262,172 @@ details summary::-webkit-details-marker {
         z-index: -1;
     }
 }
+
+.photo-processing {
+    .custom-row {
+        padding: 8px;
+        * {
+            color: white;
+        }
+        h2 {
+            margin-top: 150px;
+        }
+        p {
+            margin-top: 20px;
+        }
+        .steps {
+            h2 {
+                margin-top: 25px;
+            }
+            h2::before {
+                background-image: url(../image-svg/icon-point.svg);
+                background-size: 20px 20px;
+                display: inline-block;
+                width: 20px; 
+                height: 20px;
+                margin-right: 10px;
+                content:"";
+            }
+            .description {
+                margin-top: 7px;
+                margin-left: 30px;
+                line-height: 28px;
+            }
+        }
+        div:first-child {
+            margin-top: 35px;
+        }
+    }
+    .svg-first {
+        position: absolute;
+        top: 3196px;
+    }
+}
+
+.available-on-android {
+    h2 {
+        margin-top: 100px;
+    }
+    .custom-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        img {
+            display: block;
+            margin-right: 10px;
+        }
+    }
+}
+
+.form-contact-us {
+    * {
+        color: white;
+    }
+    h2 {
+        margin-top: 191px;
+    }
+    .description {
+        margin-top: 20px;
+    }
+    .windowInput {
+        width: 100%;
+        height: 60px;
+        border: 0;
+        background: $border-color;
+        box-sizing: border-box;
+        border-radius: 30px;
+        padding-left: 21px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: auto;
+        color: white;
+
+        @extend %bold;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 28px;
+    }
+    .windowArea {
+        display: flex;
+        width: 100%;
+        height: 120px;
+        border: 0;
+        background: $border-color;
+        box-sizing: border-box;
+        border-radius: 30px;
+        padding: 10px 20px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        margin-left: auto;
+        color: white;
+    
+        @extend %bold;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 28px;
+        resize: none;
+        overflow: hidden;
+        scrollbar-arrow-color: #0068AB;
+    }
+    .svg-first {
+        position: absolute;
+        top: 5080px;
+    }
+    .custom-row {
+        .click-down {
+            width: 100%;
+            .click-down-text {
+                @extend %bold;
+                display: inline-block;
+                font-size: 20px;
+                line-height: 30px;
+                color: white;
+                text-align: left;
+                margin-top: 13px;
+                margin-left: 31px;
+            }
+        }
+        .img-block {
+            margin-top: 20px;
+            margin-left: 160px;
+        }
+    }
+}
+
+.footer {
+    margin-top: 96px;
+    * {
+        @extend %bold;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 28px;
+    }
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .custom-row {
+        text-align: left;
+        .listBtn {
+            display: inline;
+            .to-active-color {
+                color: $active-color;
+            }
+        }
+    }
+    .svg-first {
+        position: absolute;
+        top: 5803px;
+        .morph-vector {
+            fill: $border-color;
+            stroke: black;
+            stroke-width: 0;
+        }
+    }
+}
+
+.custom-row {
+    padding: 10px;
+}
+
+

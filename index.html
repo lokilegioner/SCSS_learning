@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:500,700&display=swap" rel="stylesheet"> 
     
     <link rel="stylesheet" href="css/style.css">
-
+    <script src="js/snap.svg-min.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -44,7 +44,7 @@
                     <path class="morph-vector" 
                         d="M1047 956C1645.5 736.5 1379 -200.5 623.5 -144.5C60.1699 -102.744 -697.268 -328.832 -985 166C-1221.12 572.063 -832.437 977.773 -192 824.5C448.437 671.227 434.597 1180.6 1047 956Z">
                         <animate attributeName="d"
-                            dur="20s"
+                            dur="40s"
                             repeatCount="indefinite"
                             values="
                                 M1047 956C1645.5 736.5 1379 -200.5 623.5 -144.5C60.1699 -102.744 -697.268 -328.832 -985 166C-1221.12 572.063 -832.437 977.773 -192 824.5C448.437 671.227 434.597 1180.6 1047 956Z;
@@ -116,7 +116,7 @@
                     <path class="morph-vector" 
                         d="m 47.7834,52.5747 c 57.29872,27.784516 113.82604,44.312228 169.04142,52.89952 48.0805,7.47766 95.1662,8.93442 140.90017,6.56002 C 674.27676,95.599615 926.06928,-104.3797 994.745,238.219 c 100.1835,499.77568 -251.5896,759.70378 -649.03922,837.8438 -69.01926,13.5694 -139.41595,21.6568 -209.06246,24.5663 -74.552031,3.1143 -148.244489,0.2955 -218.467799,-8.0834 C -343.63787,1061.3065 -557.22939,952.77985 -587.36,786.292 -657.36801,399.45611 -453.25675,-63.533729 -81.542301,8.2961869 -40.435425,16.239659 2.7211603,30.72373 47.7834,52.5747 Z">
                         <animate attributeName="d"
-                            dur="20s"
+                            dur="40s"
                             repeatCount="indefinite"
                             values="
                                 m 47.7834,52.5747 c 57.29872,27.784516 113.82604,44.312228 169.04142,52.89952 48.0805,7.47766 95.1662,8.93442 140.90017,6.56002 C 674.27676,95.599615 926.06928,-104.3797 994.745,238.219 c 100.1835,499.77568 -251.5896,759.70378 -649.03922,837.8438 -69.01926,13.5694 -139.41595,21.6568 -209.06246,24.5663 -74.552031,3.1143 -148.244489,0.2955 -218.467799,-8.0834 C -343.63787,1061.3065 -557.22939,952.77985 -587.36,786.292 -657.36801,399.45611 -453.25675,-63.533729 -81.542301,8.2961869 -40.435425,16.239659 2.7211603,30.72373 47.7834,52.5747 Z;
@@ -144,11 +144,185 @@
                 </p>
             </div>
             <div class="custom-row">
-                
+                <svg 
+                    version="1.1" 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="100%"
+                    height="170"
+                    viewBox="0 0 320 170"
+                    class="svg-diagram"
+                    id="figure">
+                </svg>
             </div>
+            
         </div>
     </section>
 
+    <section>
+        <div class="photo-processing">
+            <div class="custom-row">
+                <h2>Photo processing and process costs</h2>
+            </div>
+            <div class="custom-row">
+                <p class="description">
+                    Before starting the process of finding the coordinates of pupils, the taken or uploaded photos should be reduced to the minimum resolution in order to increase the speed of processing them by the OpenCV library
+                </p>
+            </div>
+            <div class="custom-row">
+                <div class="steps">
+                    <h2>Step1</h2>
+                    <p class="description">
+                        To improve the quality of results please make sure your phone if immobilized and not moving during the photoshoot.
+                    </p>
+                </div>
+                <div class="steps">
+                    <h2>Step2</h2>
+                    <p class="description">
+                        Make sure your head is not moving and positioned according to the guide lines on the screen of your phone.
+                    </p>
+                </div>
+                <div class="steps">
+                    <h2>Step3</h2>
+                    <p class="description">
+                        Take a photoshoot in a well-lit environment, make sure there are no glares on the pupils and the screen of the phone.
+                    </p>
+                </div>
+                <div class="steps">
+                    <h2>Step4</h2>
+                    <p class="description">
+                        Deselection of photos from series can sightly reduce eye-tracking algorithm accuracy. Perform this action only if you sure algorithm has failed to track an eye pupil correctly for one or more photos.
+                    </p>
+                </div>
+                <div class="steps">
+                    <h2>Step5</h2>
+                    <p class="description">
+                        Take a photoshoot in a well-lit environment, make sure there are no glares on the pupils and the screen of the phone.
+                    </p>
+                </div>
+            </div>
+            <svg 
+                version="1.1" 
+                xmlns="http://www.w3.org/2000/svg" 
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="100%"
+                height="1467"
+                viewBox="0 0 320 1467"
+                class="svg-first">
+                    <path class="morph-vector" 
+                        d="m -489.284,41.955 c -497.50004,146.64288 -395.25,1123.955 -70.564,1243.125 136.23712,50.0027 333.16413,118.2399 551.4689459,137.9568 53.4284211,4.8256 108.1373471,-6.4909 163.5504741,-3.9719 57.99812,2.6364 116.76767,18.9934 175.64787,18.8858 C 880.52056,1436.9462 1439.8663,1281.4448 1471.17,941.237 1514.22,473.492 1275.22,56.2886 643.716,124.955 513.19885,139.14697 409.48587,137.6632 322.6804,127.67176 259.29291,120.37577 204.92097,108.54325 155.71106,94.965282 100.15856,79.637271 51.184491,62.084878 3.2449952,46.323466 -129.57336,2.6558213 -254.45043,-27.264434 -489.284,41.955 Z">
+                        <animate attributeName="d"
+                            dur="20s"
+                            repeatCount="indefinite"
+                            values="
+                                m -489.284,41.955 c -497.50004,146.64288 -395.25,1123.955 -70.564,1243.125 136.23712,50.0027 333.16413,118.2399 551.4689459,137.9568 53.4284211,4.8256 108.1373471,-6.4909 163.5504741,-3.9719 57.99812,2.6364 116.76767,18.9934 175.64787,18.8858 C 880.52056,1436.9462 1439.8663,1281.4448 1471.17,941.237 1514.22,473.492 1275.22,56.2886 643.716,124.955 513.19885,139.14697 409.48587,137.6632 322.6804,127.67176 259.29291,120.37577 204.92097,108.54325 155.71106,94.965282 100.15856,79.637271 51.184491,62.084878 3.2449952,46.323466 -129.57336,2.6558213 -254.45043,-27.264434 -489.284,41.955 Z;
+                                m -489.284,41.955 c -497.50004,146.64288 -395.25,1123.955 -70.564,1243.125 136.23712,50.0027 333.16413,118.2399 551.4689459,137.9568 53.4284211,4.8256 108.1373421,20.2418 163.5504741,22.7607 123.40343,5.6095 116.76767,-51.1797 175.64787,-51.2873 C 880.52056,1393.5057 1439.8663,1281.4448 1471.17,941.237 1514.22,473.492 1275.22,56.2886 643.716,124.955 513.19885,139.14697 409.48587,99.235084 322.6804,89.243644 259.29291,81.947654 248.36145,103.53089 155.71106,94.965282 98.327409,89.660116 54.526066,50.389365 3.2449952,98.117883 -99.098896,193.37179 -254.45043,-27.264434 -489.284,41.955 Z;
+                                m -489.284,41.955 c -497.50004,146.64288 -395.25,1123.955 -70.564,1243.125 136.23712,50.0027 333.16413,118.2399 551.4689459,137.9568 53.4284211,4.8256 108.1373471,-6.4909 163.5504741,-3.9719 57.99812,2.6364 116.76767,18.9934 175.64787,18.8858 C 880.52056,1436.9462 1439.8663,1281.4448 1471.17,941.237 1514.22,473.492 1275.22,56.2886 643.716,124.955 513.19885,139.14697 409.48587,137.6632 322.6804,127.67176 259.29291,120.37577 204.92097,108.54325 155.71106,94.965282 100.15856,79.637271 51.184491,62.084878 3.2449952,46.323466 -129.57336,2.6558213 -254.45043,-27.264434 -489.284,41.955 Z
+                                "
+                        />
+                    </path>
+            </svg>
+        </div>
+    </section>
+
+    <section>
+        <div class="available-on-android">
+            <div class="custom-row">
+                <h2>Available on Android and IOS</h2>
+            </div>
+            <div class="custom-row">
+                <p class="description">
+                    Deselection of photos from series can sightly reduce eye-tracking algorithm accuracy. Perform this action only if you sure algorithm has failed to track an eye pupil correctly for one or more photos.
+                </p>
+            </div>
+            <div class="custom-row">
+                <img src="image-png/google-play.png" alt="">
+                <img src="image-png/app-store.png" alt="">
+            </div>
+        </div>
+    </section>
+        
+    <section>
+        <div class="form-contact-us">
+            <div class="custom-row">
+                <h2>Contact us</h2>
+                <p class="description">
+                    The main purpose of EyeTracker is help saving the time of medical observation and identification of eye problems.
+                </p>
+                <input type="text" class="windowInput" name="user_name" placeholder="Your name*">
+                <input type="text" class="windowInput" name="user_email" placeholder="Your email*">
+                <textarea name="user_message" id="" cols="30" rows="10" class="windowArea" placeholder="Message"></textarea>
+                <a class="click-down" href="#">
+                    <span class="click-down-text">Send</span>
+                    <img src="image-svg/icon-arrow.svg" alt="" class="img-block">
+                </a>
+            </div>
+            <svg 
+                version="1.1" 
+                xmlns="http://www.w3.org/2000/svg" 
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="100%"
+                height="980"
+                viewBox="0 0 320 980"
+                class="svg-first">
+                    <path class="morph-vector" 
+                        d="M -546.07612,80.427084 C -1096.7989,421.62124 -884.534,1165.91 -559.848,1285.08 -29.5604,1479.71 1420.22,1494.96 1471.17,941.237 1539.8681,400.21184 1275.22,56.2886 643.716,124.955 512.30079,139.24462 408.0599,137.64204 320.89094,127.46431 186.17473,111.73503 92.233989,75.524456 1.7782748,45.841701 -130.4944,2.4368436 -412.66784,-2.2245357 -546.07612,80.427084 Z">
+                        <animate attributeName="d"
+                            dur="40s"
+                            repeatCount="indefinite"
+                            values="
+                                M -546.07612,80.427084 C -1096.7989,421.62124 -884.534,1165.91 -559.848,1285.08 -29.5604,1479.71 1420.22,1494.96 1471.17,941.237 1539.8681,400.21184 1275.22,56.2886 643.716,124.955 512.30079,139.24462 408.0599,137.64204 320.89094,127.46431 186.17473,111.73503 92.233989,75.524456 1.7782748,45.841701 -130.4944,2.4368436 -412.66784,-2.2245357 -546.07612,80.427084 Z;
+                                M -546.07612,80.427084 C -1096.7989,421.62124 -884.534,1165.91 -559.848,1285.08 -29.5604,1479.71 1420.22,1494.96 1471.17,941.237 1539.8681,400.21184 1275.22,56.2886 643.716,124.955 512.30079,139.24462 408.0599,38.713823 320.89094,28.536096 186.17473,12.806818 99.562005,64.532432 1.7782748,60.497733 -137.31559,54.758518 -412.66784,-2.2245357 -546.07612,80.427084 Z;
+                                M -546.07612,80.427084 C -1096.7989,421.62124 -884.534,1165.91 -559.848,1285.08 -29.5604,1479.71 1420.22,1494.96 1471.17,941.237 1539.8681,400.21184 1275.22,56.2886 643.716,124.955 512.30079,139.24462 408.0599,137.64204 320.89094,127.46431 186.17473,111.73503 92.233989,75.524456 1.7782748,45.841701 -130.4944,2.4368436 -412.66784,-2.2245357 -546.07612,80.427084 Z
+                                "
+                        />
+                    </path>
+            </svg>
+        </div>
+    </section>
+
+    <section>
+        <div class="footer">
+            <div class="custom-row">
+                <a href="" class="listBtn">About</a><br>
+                <a href="" class="listBtn">How it Works</a>
+            </div>
+            <div class="custom-row">
+                <a href="" class="listBtn">Download</a><br>
+                <a href="" class="listBtn">Privacy pokicy</a>
+            </div>
+            <div class="custom-row">
+                <a href="" class="listBtn">Email: business@bvgsoftwaregroup.com </a>
+            </div>
+            <div class="custom-row">
+                <a href="" class="listBtn"><span class="to-active-color">© 2011 - 2019 Copyright BVG Software Group. All rights reserved.</span></a>
+            </div>
+            <svg 
+                version="1.1" 
+                xmlns="http://www.w3.org/2000/svg" 
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="100%"
+                height="380"
+                viewBox="0 0 320 380"
+                class="svg-first">
+                    <path class="morph-vector" 
+                        d="M-2.63333 30.7422C658.241 147.308 646.746 -143.136 1168.06 104.064C1237.81 137.14 1295.09 185.182 1341.22 243.961L694.716 385.961L-145.284 385.961L-673.784 243.961C-513.344 77.6228 -279.753 -18.1362 -2.63333 30.7422Z">
+                        <animate attributeName="d"
+                            dur="10s"
+                            repeatCount="indefinite"
+                            values="
+                                m -2.63333,30.7422 c 131.35215,23.168049 236.1433,30.257747 323.83595,28.686084 353.51687,-6.335873 429.1572,-153.43202 846.85738,44.635716 69.75,33.076 127.03,81.118 173.16,139.897 l -646.504,142 h -840 l -528.5,-142 C -513.344,77.6228 -279.753,-18.1362 -2.63333,30.7422 Z;
+                                M -2.63333,30.7422 C 128.71882,53.910249 234.59895,92.580456 321.20262,59.428284 651.40909,-66.975856 750.35982,-94.003736 1168.06,104.064 c 69.75,33.076 127.03,81.118 173.16,139.897 l -646.504,142 h -840 l -528.5,-142 C -513.344,77.6228 -279.753,-18.1362 -2.63333,30.7422 Z;
+                                m -2.63333,30.7422 c 131.35215,23.168049 236.1433,30.257747 323.83595,28.686084 353.51687,-6.335873 429.1572,-153.43202 846.85738,44.635716 69.75,33.076 127.03,81.118 173.16,139.897 l -646.504,142 h -840 l -528.5,-142 C -513.344,77.6228 -279.753,-18.1362 -2.63333,30.7422 Z
+                                "
+                        />
+                    </path>
+            </svg>
+        </div>
+        
+    </section>
+
     <script src="js/code.js"></script>
+    <script src="js/svg.js"></script>
 </body>
 </html>
