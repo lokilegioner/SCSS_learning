@@ -10,7 +10,7 @@ let
     dropBtn = document.createElement('div');
 
 listMenu.classList.add('drop-menu-js-hide');
-for (let i = 0; i < listItems.length; i++) {
+for (let i = 0; i < 4; i++) {
     menuItems.push(document.createElement('a'));
     menuItems[i].setAttribute('href', '#');
     menuItems[i].classList.add('listBtn');

@@ -49,7 +49,7 @@ nav {
   stroke-width: 0;
 }
 
-.svg-first {
+.svg-box-mt {
   display: block;
   position: absolute;
   top: 0;
@@ -266,7 +266,7 @@ details summary::-webkit-details-marker {
   margin-top: 150px;
   margin-bottom: 20px;
 }
-.cage-content .svg-first {
+.cage-content .svg-box-mt {
   display: block;
   position: absolute;
   top: 1580px;
@@ -306,7 +306,7 @@ details summary::-webkit-details-marker {
 .photo-processing .custom-row div:first-child {
   margin-top: 35px;
 }
-.photo-processing .svg-first {
+.photo-processing .svg-box-mt {
   position: absolute;
   top: 3196px;
 }
@@ -404,7 +404,7 @@ details summary::-webkit-details-marker {
 .form-contact-us .windowArea::placeholder {
   color: #8aa5e4;
 }
-.form-contact-us .svg-first {
+.form-contact-us .svg-box-mt {
   position: absolute;
   top: 5080px;
 }
@@ -454,11 +454,11 @@ details summary::-webkit-details-marker {
 .footer .custom-row .listBtn .to-active-color {
   color: #5f76d8;
 }
-.footer .svg-first {
+.footer .svg-box-mt {
   position: absolute;
   top: 5803px;
 }
-.footer .svg-first .morph-vector {
+.footer .svg-box-mt .morph-vector {
   fill: #164BC9;
   stroke: black;
   stroke-width: 0;

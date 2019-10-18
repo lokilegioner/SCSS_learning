@@ -54,7 +54,7 @@ nav {
     stroke-width: 0;
 }
 
-.svg-first {
+.svg-box-mt {
     display: block;
     position: absolute;
     top: 0;
@@ -255,7 +255,7 @@ details summary::-webkit-details-marker {
         margin-top: 150px;
         margin-bottom: 20px;
     }
-    .svg-first {
+    .svg-box-mt {
         display: block;
         position: absolute;
         top: 1580px;
@@ -299,7 +299,7 @@ details summary::-webkit-details-marker {
             margin-top: 35px;
         }
     }
-    .svg-first {
+    .svg-box-mt {
         position: absolute;
         top: 3196px;
     }
@@ -377,7 +377,7 @@ details summary::-webkit-details-marker {
     .windowArea::placeholder {
         color: $input-placeholder-color;
     }
-    .svg-first {
+    .svg-box-mt {
         position: absolute;
         top: 5080px;
     }
@@ -423,7 +423,7 @@ details summary::-webkit-details-marker {
             }
         }
     }
-    .svg-first {
+    .svg-box-mt {
         position: absolute;
         top: 5803px;
         .morph-vector {
