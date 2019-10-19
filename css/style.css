@@ -98,8 +98,12 @@ nav {
   margin: 3em auto;
   width: 90%;
 }
+#for-drop-menu-js .content .margin-correction {
+  margin-top: -71px;
+}
 #for-drop-menu-js .content h1 {
   color: white;
+  margin-top: 60px;
   margin-bottom: 20px;
 }
 #for-drop-menu-js .content .description {
@@ -345,8 +349,7 @@ details summary::-webkit-details-marker {
   height: 60px;
   border: 0;
   background: #164BC9;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border-radius: 30px;
   padding-left: 21px;
   margin-top: 10px;
@@ -363,9 +366,6 @@ details summary::-webkit-details-marker {
 .form-contact-us .windowInput:-ms-input-placeholder {
   color: #8aa5e4;
 }
-.form-contact-us .windowInput::-ms-input-placeholder {
-  color: #8aa5e4;
-}
 .form-contact-us .windowInput::placeholder {
   color: #8aa5e4;
 }
@@ -377,8 +377,7 @@ details summary::-webkit-details-marker {
   height: 120px;
   border: 0;
   background: #164BC9;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border-radius: 30px;
   padding: 10px 20px;
   margin-top: 10px;
@@ -398,15 +397,12 @@ details summary::-webkit-details-marker {
 .form-contact-us .windowArea:-ms-input-placeholder {
   color: #8aa5e4;
 }
-.form-contact-us .windowArea::-ms-input-placeholder {
-  color: #8aa5e4;
-}
 .form-contact-us .windowArea::placeholder {
   color: #8aa5e4;
 }
 .form-contact-us .svg-box-mt {
   position: absolute;
-  top: 5080px;
+  top: 5030px;
 }
 .form-contact-us .custom-row .click-down {
   width: 100%;
@@ -456,7 +452,7 @@ details summary::-webkit-details-marker {
 }
 .footer .svg-box-mt {
   position: absolute;
-  top: 5803px;
+  top: 5703px;
 }
 .footer .svg-box-mt .morph-vector {
   fill: #164BC9;
@@ -467,3 +463,5 @@ details summary::-webkit-details-marker {
 .custom-row {
   padding: 10px;
 }
+
+/*# sourceMappingURL=style.css.map */

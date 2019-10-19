@@ -3,7 +3,7 @@
 let s = Snap('#figure'),
     mtElemnts = 68,
     widthWindow = document.documentElement.clientWidth;
-    console.log(widthWindow);
+    console.log('window width: ' + widthWindow + 'px');
     diagram =  s.circle(widthWindow / 4, mtElemnts, 65);
     diagram.attr({
         fill: "white",

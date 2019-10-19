@@ -1,13 +1,18 @@
 let
+    btnDropMenu = document.querySelector('.drop-list'),
+    titleToFix = document.querySelector('#title-droped'),
+
     listMenu = document.createElement('div'),
     blockContent = document.getElementById('block-after-drop-menu'),
-    isDroped = false;
-    mt_afterDropedBlock = '9em';
-    mt_beforeDropedBlock = '3em';
+    isDroped = false,
+    mt_afterDropedBlock = '9em',
+    mt_beforeDropedBlock = '3em',
     listItems = document.querySelectorAll('.listBtn'),
     menuItems = [],
     dropBtnContainer = document.querySelector('#drop-down-cage'),
     dropBtn = document.createElement('div');
+
+// Drop down menu for Edge
 
 listMenu.classList.add('drop-menu-js-hide');
 for (let i = 0; i < 4; i++) {
@@ -30,8 +35,15 @@ dropBtn.addEventListener('click', function(){
         blockContent.style.margin = mt_afterDropedBlock + ' auto';
         isDroped = !isDroped;
     } else {
-        blockContent.style.margin = '3em auto';
+        blockContent.style.margin = mt_beforeDropedBlock + 'auto';
         isDroped = !isDroped;
     }
     
-})
+});
+
+//Correction margin-top h1 after as detail droped for Chrome, Firefox
+
+    btnDropMenu.addEventListener('click', function() {
+        titleToFix.classList.toggle('margin-correction');
+    });
+

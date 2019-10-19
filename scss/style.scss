@@ -1,5 +1,4 @@
 $bg-color: #1B3CC8;
-$bg-add-color: #164BC9;
 $hover-color: #bac4ee;
 $active-color: #5f76d8;
 $border-color: #164BC9;
@@ -97,8 +96,12 @@ nav {
         position: relative;
         margin: 3em auto;
         width: 90%;
+        .margin-correction {
+            margin-top: -71px;
+        }
         h1 {
             color: white;
+            margin-top: 60px;
             margin-bottom: 20px;
         }
         .description {
@@ -379,7 +382,7 @@ details summary::-webkit-details-marker {
     }
     .svg-box-mt {
         position: absolute;
-        top: 5080px;
+        top: 5030px;
     }
     .custom-row {
         .click-down {
@@ -425,7 +428,7 @@ details summary::-webkit-details-marker {
     }
     .svg-box-mt {
         position: absolute;
-        top: 5803px;
+        top: 5703px;
         .morph-vector {
             fill: $border-color;
             stroke: black;
