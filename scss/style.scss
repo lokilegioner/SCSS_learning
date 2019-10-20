@@ -15,7 +15,7 @@ $input-placeholder-color: #8aa5e4;
     font-weight: bold;
     letter-spacing: -0.03em;
     text-decoration: none;
-    user-select: none;
+    user-select: none
 }
 
 h1 {
@@ -33,6 +33,30 @@ h2 {
 nav {
     display: flex;
     position: relative;
+}
+
+@keyframes arrowBtnShake {
+    from {
+        margin-left: 36px;
+    }
+    50% {
+        margin-left: 41px;
+    }
+    to {
+        margin-left: 36px;
+    }
+}
+
+@keyframes arrowBtnShake2 {
+    from {
+        margin-left: 165px;
+    }
+    50% {
+        margin-left: 170px;
+    }
+    to {
+        margin-left: 165px;
+    }
 }
 
 .link-font {
@@ -108,8 +132,43 @@ nav {
             color: white;
         }
         .img-block {
-            margin-top: 5px;
+            display: inline;
             margin-left: 20px;
+        }
+        .img-block:last-child {
+            max-width: 250px;
+            display: block;
+        }
+        .click-down {
+            .click-down-text::after {
+                background-image: url(../image-svg/icon-arrow.svg);
+                background-size: 20px 20px;
+                display: inline-block;
+                width: 20px; 
+                height: 20px;
+                transform:translate(0, 4px);
+                margin-left: 36px;
+                content:"";
+            }
+        }
+        .click-down:hover .click-down-text::after {
+            animation-name: arrowBtnShake;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+        }
+    }
+}
+
+@-moz-document url-prefix() {
+    .content {
+        .click-down {
+            .click-down-text::after {
+                animation-name: arrowBtnShake;
+                animation-duration: 1s;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: infinite;
+            }
         }
     }
 }
@@ -387,20 +446,39 @@ details summary::-webkit-details-marker {
     .custom-row {
         .click-down {
             width: 100%;
-            .click-down-text {
-                @extend %bold;
+            .click-down-text::after {
+                background-image: url(../image-svg/icon-arrow.svg);
+                background-size: 20px 20px;
                 display: inline-block;
-                font-size: 20px;
-                line-height: 30px;
-                color: white;
-                text-align: left;
-                margin-top: 13px;
-                margin-left: 31px;
+                width: 20px; 
+                height: 20px;
+                transform:translate(0,3px);
+                margin-left: 165px;
+                content:"";
             }
+        }
+        .click-down:hover .click-down-text::after {
+            animation-name: arrowBtnShake2;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
         }
         .img-block {
             margin-top: 20px;
             margin-left: 160px;
+        }
+    }
+}
+
+@-moz-document url-prefix() {
+    .custom-row {
+        .click-down {
+            .click-down-text::after {
+                animation-name: arrowBtnShake2;
+                animation-duration: 1s;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: infinite;
+            }
         }
     }
 }
@@ -428,7 +506,7 @@ details summary::-webkit-details-marker {
     }
     .svg-box-mt {
         position: absolute;
-        top: 5703px;
+        top: 5750px;
         .morph-vector {
             fill: $border-color;
             stroke: black;

@@ -3,7 +3,7 @@
   padding: 0;
 }
 
-h1, h2, .description, .click-down .click-down-text, .listBtn, .algorithm-processing .custom-row .svg-diagram .svg-text, .form-contact-us .windowInput, .form-contact-us .windowArea, .form-contact-us .custom-row .click-down .click-down-text, .footer * {
+h1, h2, .description, .click-down .click-down-text, .listBtn, .algorithm-processing .custom-row .svg-diagram .svg-text, .form-contact-us .windowInput, .form-contact-us .windowArea, .footer * {
   font-family: Roboto Mono;
   font-style: normal;
   font-weight: bold;
@@ -32,6 +32,51 @@ nav {
   position: relative;
 }
 
+@-webkit-keyframes arrowBtnShake {
+  from {
+    margin-left: 36px;
+  }
+  50% {
+    margin-left: 41px;
+  }
+  to {
+    margin-left: 36px;
+  }
+}
+
+@keyframes arrowBtnShake {
+  from {
+    margin-left: 36px;
+  }
+  50% {
+    margin-left: 41px;
+  }
+  to {
+    margin-left: 36px;
+  }
+}
+@-webkit-keyframes arrowBtnShake2 {
+  from {
+    margin-left: 165px;
+  }
+  50% {
+    margin-left: 170px;
+  }
+  to {
+    margin-left: 165px;
+  }
+}
+@keyframes arrowBtnShake2 {
+  from {
+    margin-left: 165px;
+  }
+  50% {
+    margin-left: 170px;
+  }
+  to {
+    margin-left: 165px;
+  }
+}
 .link-font {
   font-size: 20px;
   line-height: 23px;
@@ -110,10 +155,43 @@ nav {
   color: white;
 }
 #for-drop-menu-js .content .img-block {
-  margin-top: 5px;
+  display: inline;
   margin-left: 20px;
 }
+#for-drop-menu-js .content .img-block:last-child {
+  max-width: 250px;
+  display: block;
+}
+#for-drop-menu-js .content .click-down .click-down-text::after {
+  background-image: url(../image-svg/icon-arrow.svg);
+  background-size: 20px 20px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  -webkit-transform: translate(0, 4px);
+          transform: translate(0, 4px);
+  margin-left: 36px;
+  content: "";
+}
+#for-drop-menu-js .content .click-down:hover .click-down-text::after {
+  -webkit-animation-name: arrowBtnShake;
+          animation-name: arrowBtnShake;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
 
+@-moz-document url-prefix() {
+  .content .click-down .click-down-text::after {
+    animation-name: arrowBtnShake;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+}
 .img-block {
   display: inline-block;
 }
@@ -407,20 +485,40 @@ details summary::-webkit-details-marker {
 .form-contact-us .custom-row .click-down {
   width: 100%;
 }
-.form-contact-us .custom-row .click-down .click-down-text {
+.form-contact-us .custom-row .click-down .click-down-text::after {
+  background-image: url(../image-svg/icon-arrow.svg);
+  background-size: 20px 20px;
   display: inline-block;
-  font-size: 20px;
-  line-height: 30px;
-  color: white;
-  text-align: left;
-  margin-top: 13px;
-  margin-left: 31px;
+  width: 20px;
+  height: 20px;
+  -webkit-transform: translate(0, 3px);
+          transform: translate(0, 3px);
+  margin-left: 165px;
+  content: "";
+}
+.form-contact-us .custom-row .click-down:hover .click-down-text::after {
+  -webkit-animation-name: arrowBtnShake2;
+          animation-name: arrowBtnShake2;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 .form-contact-us .custom-row .img-block {
   margin-top: 20px;
   margin-left: 160px;
 }
 
+@-moz-document url-prefix() {
+  .custom-row .click-down .click-down-text::after {
+    animation-name: arrowBtnShake2;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+}
 .footer {
   margin-top: 96px;
   display: -webkit-box;
@@ -452,7 +550,7 @@ details summary::-webkit-details-marker {
 }
 .footer .svg-box-mt {
   position: absolute;
-  top: 5703px;
+  top: 5750px;
 }
 .footer .svg-box-mt .morph-vector {
   fill: #164BC9;
@@ -463,5 +561,3 @@ details summary::-webkit-details-marker {
 .custom-row {
   padding: 10px;
 }
-
-/*# sourceMappingURL=style.css.map */
