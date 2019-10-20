@@ -139,30 +139,39 @@ nav {
 }
 
 #for-drop-menu-js .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   position: relative;
   margin: 3em auto;
   width: 90%;
 }
-#for-drop-menu-js .content .margin-correction {
+#for-drop-menu-js .content .custom-col .margin-correction {
   margin-top: -71px;
 }
-#for-drop-menu-js .content h1 {
+#for-drop-menu-js .content .custom-col h1 {
   color: white;
   margin-top: 60px;
   margin-bottom: 20px;
 }
-#for-drop-menu-js .content .description {
+#for-drop-menu-js .content .custom-col .description {
   color: white;
 }
-#for-drop-menu-js .content .img-block {
+#for-drop-menu-js .content .custom-col .img-block {
   display: inline;
   margin-left: 20px;
 }
-#for-drop-menu-js .content .img-block:last-child {
+#for-drop-menu-js .content .custom-col .img-block:last-child {
   max-width: 250px;
   display: block;
 }
-#for-drop-menu-js .content .click-down .click-down-text::after {
+#for-drop-menu-js .content .custom-col .click-down .click-down-text::after {
   background-image: url(../image-svg/icon-arrow.svg);
   background-size: 20px 20px;
   display: inline-block;
@@ -173,7 +182,7 @@ nav {
   margin-left: 36px;
   content: "";
 }
-#for-drop-menu-js .content .click-down:hover .click-down-text::after {
+#for-drop-menu-js .content .custom-col .click-down:hover .click-down-text::after {
   -webkit-animation-name: arrowBtnShake;
           animation-name: arrowBtnShake;
   -webkit-animation-duration: 1s;
@@ -182,6 +191,19 @@ nav {
           animation-timing-function: ease-in-out;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
+}
+@media (min-width: 540px) {
+  #for-drop-menu-js .content .custom-col {
+    width: 50%;
+  }
+}
+@media (min-width: 1140px) {
+  #for-drop-menu-js .content {
+    width: 57.8125%;
+  }
+  #for-drop-menu-js .content .custom-col {
+    width: 50%;
+  }
 }
 
 @-moz-document url-prefix() {
