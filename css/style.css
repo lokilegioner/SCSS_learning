@@ -127,6 +127,10 @@ nav {
   display: block;
 }
 
+.top-svg-background {
+  background: url('data:image/svg+xml,%3Csvg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%25" height="1014" viewBox="0 0 320 1014" class="svg-box-mt"%3E%3Cpath class="morph-vector" fill="%231B3CC8" d="M 1047,956 C 1645.5,736.5 1379,-200.5 623.5,-144.5 60.1699,-102.744 -697.268,-328.832 -985,166 c -76.677,131.86378 -87.4658,263.69034 -45.1415,376.34943 C -942.13176,776.61415 -624.46325,927.99955 -192,824.5 48.123024,767.0324 196.26964,802.7177 319.93282,857.94364 464.62602,922.56124 575.80047,1013.9307 761.5701,1014.1359 840.4883,1014.2231 932.86868,997.85789 1047,956 Z"%3E%3Canimate attributeName="d" dur="40s" repeatCount="indefinite" values="M 1047,956 C 1645.5,736.5 1379,-200.5 623.5,-144.5 60.1699,-102.744 -697.268,-328.832 -985,166 c -76.677,131.86378 -87.4658,263.69034 -45.1415,376.34943 C -942.13176,776.61415 -624.46325,927.99955 -192,824.5 48.123024,767.0324 196.26964,802.7177 319.93282,857.94364 464.62602,922.56124 575.80047,1013.9307 761.5701,1014.1359 840.4883,1014.2231 932.86868,997.85789 1047,956 Z;M 1093.6862,973.50734 C 1692.1862,754.00734 1379,-200.5 623.5,-144.5 60.1699,-102.744 -722.07006,-353.63406 -1009.8021,141.19794 c -76.677,131.86378 -78.6343,295.86559 -20.3394,401.15149 188.67693,340.76768 568.26622,346.15118 760.81743,358.0157 133.5204,8.22718 457.28349,-11.99931 589.25689,-42.42149 137.39848,-31.67275 255.86765,155.98706 441.63728,156.19226 78.9182,0.087 217.98481,1.2293 332.1161,-40.62856 z;M 1047,956 C 1645.5,736.5 1379,-200.5 623.5,-144.5 60.1699,-102.744 -697.268,-328.832 -985,166 c -76.677,131.86378 -87.4658,263.69034 -45.1415,376.34943 C -942.13176,776.61415 -624.46325,927.99955 -192,824.5 48.123024,767.0324 196.26964,802.7177 319.93282,857.94364 464.62602,922.56124 575.80047,1013.9307 761.5701,1014.1359 840.4883,1014.2231 932.86868,997.85789 1047,956 Z"/%3E%3C/path%3E%3C/svg%3E');
+}
+
 #for-drop-menu-js header nav .content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -158,6 +162,22 @@ nav {
 @media (min-width: 720px) {
   #for-drop-menu-js header nav .content .toHide {
     display: none;
+  }
+}
+@supports (-ms-ime-align: auto) {
+  #for-drop-menu-js header nav .content .drop-menu-details {
+    display: none;
+  }
+  #for-drop-menu-js header nav .content .drop-menu-btn {
+    display: block;
+    position: absolute;
+    top: 4px;
+    right: 2px;
+    outline-style: none;
+    background: url(../image-svg/icon-menu.svg);
+    width: 28px;
+    height: 23px;
+    cursor: pointer;
   }
 }
 #for-drop-menu-js .content {
@@ -257,23 +277,6 @@ nav {
   display: none;
 }
 
-@supports (-ms-ime-align: auto) {
-  .drop-menu-details {
-    display: none;
-  }
-
-  .drop-menu-btn {
-    display: block;
-    position: absolute;
-    top: 25px;
-    right: 20px;
-    outline-style: none;
-    background: url(../image-svg/icon-menu.svg);
-    width: 28px;
-    height: 23px;
-    cursor: pointer;
-  }
-}
 details summary::-webkit-details-marker {
   display: none;
 }
