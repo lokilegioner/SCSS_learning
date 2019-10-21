@@ -86,11 +86,7 @@ nav {
 }
 
 .cage {
-    display: flex;
-    width: 90%;
-    margin: 23px auto;
-    flex-direction: row;
-    justify-content: space-between;
+    
 }
 
 .click-down {
@@ -115,7 +111,41 @@ nav {
     }
 }
 
+.toHide {
+    display: block;
+}
+
 #for-drop-menu-js {
+    header {
+        nav {
+            .content{
+                display: flex;
+                width: 90%;
+                margin: 22px auto;
+                flex-direction: row;
+                justify-content: space-between;
+                .img-block {
+                    display: inline-block;
+                    margin-top: 0px;
+                }
+                .drop-list {
+                    display: block;
+                    position: absolute;
+                    top: 4px;
+                    right: 2px;
+                    outline-style: none;
+                    background: url(../image-svg/icon-menu.svg);
+                    width: 28px;
+                    height: 23px;
+                }
+                @media (min-width: 720px) {
+                    .toHide {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
     .content {
         display: flex;
         flex-direction: row;
@@ -191,10 +221,6 @@ nav {
     }
 }
 
-.img-block {
-    display: inline-block;
-}
-
 .drop-menu-details {
     display: block;
 }
@@ -240,17 +266,6 @@ details summary::-webkit-details-marker {
 .drop-menu-details[open] {
     margin-top: 2em;
     margin-right: .8em;
-}
-
-.drop-list {
-    display: block;
-    position: absolute;
-    top: 25px;
-    right: 20px;
-    outline-style: none;
-    background: url(../image-svg/icon-menu.svg);
-    width: 28px;
-    height: 23px;
 }
 
 .listBtn {
