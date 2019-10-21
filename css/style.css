@@ -251,7 +251,7 @@ nav {
       margin-left: 20%; } }
   #for-drop-menu-js .content .custom-col .img-block:last-child {
     width: 95%;
-    max-height: 250px;
+    max-width: 250px;
     display: block; }
   @media (min-width: 321px) {
     #for-drop-menu-js .content .custom-col .img-block:last-child {
