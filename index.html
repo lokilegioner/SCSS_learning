@@ -209,6 +209,7 @@
     </section>
 
     <section>
+        <div class="photo-processing-before"></div>
         <div class="photo-processing">
             <div class="custom-row">
                 <h2 class="wow fadeInUp">Photo processing and process costs</h2>
@@ -218,7 +219,7 @@
                     Before starting the process of finding the coordinates of pupils, the taken or uploaded photos should be reduced to the minimum resolution in order to increase the speed of processing them by the OpenCV library
                 </p>
             </div>
-            <div class="custom-row">
+            <div class="custom-row toHide">
                 <div class="steps wow fadeInUp">
                     <h2>Step1</h2>
                     <p class="description">
@@ -250,28 +251,82 @@
                     </p>
                 </div>
             </div>
-            <svg 
-                version="1.1" 
-                xmlns="http://www.w3.org/2000/svg" 
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                width="100%"
-                height="1467"
-                viewBox="0 0 320 1467"
-                class="svg-box-mt">
-                    <path class="morph-vector" 
-                        d="m -489.284,41.955 c -497.50004,146.64288 -395.25,1123.955 -70.564,1243.125 136.23712,50.0027 333.16413,118.2399 551.4689459,137.9568 53.4284211,4.8256 108.1373471,-6.4909 163.5504741,-3.9719 57.99812,2.6364 116.76767,18.9934 175.64787,18.8858 C 880.52056,1436.9462 1439.8663,1281.4448 1471.17,941.237 1514.22,473.492 1275.22,56.2886 643.716,124.955 513.19885,139.14697 409.48587,137.6632 322.6804,127.67176 259.29291,120.37577 204.92097,108.54325 155.71106,94.965282 100.15856,79.637271 51.184491,62.084878 3.2449952,46.323466 -129.57336,2.6558213 -254.45043,-27.264434 -489.284,41.955 Z">
-                        <animate attributeName="d"
-                            dur="20s"
-                            repeatCount="indefinite"
-                            values="
-                                m -489.284,41.955 c -497.50004,146.64288 -395.25,1123.955 -70.564,1243.125 136.23712,50.0027 333.16413,118.2399 551.4689459,137.9568 53.4284211,4.8256 108.1373471,-6.4909 163.5504741,-3.9719 57.99812,2.6364 116.76767,18.9934 175.64787,18.8858 C 880.52056,1436.9462 1439.8663,1281.4448 1471.17,941.237 1514.22,473.492 1275.22,56.2886 643.716,124.955 513.19885,139.14697 409.48587,137.6632 322.6804,127.67176 259.29291,120.37577 204.92097,108.54325 155.71106,94.965282 100.15856,79.637271 51.184491,62.084878 3.2449952,46.323466 -129.57336,2.6558213 -254.45043,-27.264434 -489.284,41.955 Z;
-                                m -489.284,41.955 c -497.50004,146.64288 -395.25,1123.955 -70.564,1243.125 136.23712,50.0027 333.16413,118.2399 551.4689459,137.9568 53.4284211,4.8256 108.1373421,20.2418 163.5504741,22.7607 123.40343,5.6095 116.76767,-51.1797 175.64787,-51.2873 C 880.52056,1393.5057 1439.8663,1281.4448 1471.17,941.237 1514.22,473.492 1275.22,56.2886 643.716,124.955 513.19885,139.14697 409.48587,99.235084 322.6804,89.243644 259.29291,81.947654 248.36145,103.53089 155.71106,94.965282 98.327409,89.660116 54.526066,50.389365 3.2449952,98.117883 -99.098896,193.37179 -254.45043,-27.264434 -489.284,41.955 Z;
-                                m -489.284,41.955 c -497.50004,146.64288 -395.25,1123.955 -70.564,1243.125 136.23712,50.0027 333.16413,118.2399 551.4689459,137.9568 53.4284211,4.8256 108.1373471,-6.4909 163.5504741,-3.9719 57.99812,2.6364 116.76767,18.9934 175.64787,18.8858 C 880.52056,1436.9462 1439.8663,1281.4448 1471.17,941.237 1514.22,473.492 1275.22,56.2886 643.716,124.955 513.19885,139.14697 409.48587,137.6632 322.6804,127.67176 259.29291,120.37577 204.92097,108.54325 155.71106,94.965282 100.15856,79.637271 51.184491,62.084878 3.2449952,46.323466 -129.57336,2.6558213 -254.45043,-27.264434 -489.284,41.955 Z
-                                "
-                        />
-                    </path>
-            </svg>
+            <div class="toShow custom-grid">
+                <div class="custom-grid-row">
+                    <div class="line-col-left"></div>
+                    <div class="line-col-center">
+                        <img src="image-svg/point-line.svg" alt="">
+                    </div>
+                    <div class="line-col-right">
+                        <div class="steps wow fadeInUp" data-wow-delay="0.2s">
+                            <h2>Step1</h2>
+                            <p class="description">
+                                To improve the quality of results please make sure your phone if immobilized and not moving during the photoshoot.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="custom-grid-row">
+                        <div class="line-col-left">
+                            <div class="steps wow fadeInUp" data-wow-delay="0.7s">
+                                <h2>Step2</h2>
+                                <p class="description">
+                                    Make sure your head is not moving and positioned according to the guide lines on the screen of your phone.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="line-col-center">
+                            <img src="image-svg/point-line.svg" alt="">
+                        </div>
+                        <div class="line-col-right">
+                        </div>
+                    </div>
+                <div class="custom-grid-row">
+                    <div class="line-col-left"></div>
+                    <div class="line-col-center">
+                        <img src="image-svg/point-line.svg" alt="">
+                    </div>
+                    <div class="line-col-right">
+                        <div class="steps wow fadeInUp" data-wow-delay="1.2s">
+                            <h2>Step3</h2>
+                            <p class="description">
+                                Take a photoshoot in a well-lit environment, make sure there are no glares on the pupils and the screen of the phone.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="custom-grid-row">
+                        <div class="line-col-left">
+                            <div class="steps wow fadeInUp" data-wow-delay="1.7s">
+                                <h2>Step4</h2>
+                                <p class="description">
+                                    Deselection of photos from series can sightly reduce eye-tracking algorithm accuracy. Perform this action only if you sure algorithm has failed to track an eye pupil correctly for one or more photos.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="line-col-center">
+                            <img src="image-svg/point-line.svg" alt="">
+                        </div>
+                        <div class="line-col-right">
+                        </div>
+                    </div>
+                <div class="custom-grid-row">
+                    <div class="line-col-left"></div>
+                    <div class="line-col-center">
+                        <img src="image-svg/only-point.svg" alt="">
+                    </div>
+                    <div class="line-col-right">
+                        <div class="steps wow fadeInUp" data-wow-delay="2.2s">
+                            <h2>Step5</h2>
+                            <p class="description">
+                                Take a photoshoot in a well-lit environment, make sure there are no glares on the pupils and the screen of the phone.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+        <div class="photo-processing-after"></div>
     </section>
 
     <section>

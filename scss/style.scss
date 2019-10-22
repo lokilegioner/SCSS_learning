@@ -613,33 +613,33 @@ details summary::-webkit-details-marker {
 }
 
 .photo-processing {
+    background-color: $bg-color;
+    margin: -60vw 0px;
     .custom-row {
-        padding: 8px;
+        padding: 0 15.5px;
+        text-align: left;
         * {
             color: white;
         }
-        h2 {
-            margin-top: 150px;
-        }
         p {
-            margin-top: 20px;
+            margin: 20px 0;
         }
         .steps {
             h2 {
                 margin-top: 25px;
             }
             h2::before {
-                background-image: url(../image-svg/icon-point.svg);
-                background-size: 20px 20px;
+                background: url(../image-svg/icon-point.svg) no-repeat;
+                background-size: 15px 15px;
                 display: inline-block;
-                width: 20px; 
-                height: 20px;
-                margin-right: 10px;
+                width: 15px; 
+                height: 15px;
+                transform: translate(-6px, -1px);
                 content:"";
             }
             .description {
-                margin-top: 7px;
-                margin-left: 30px;
+                margin-top: 1px;
+                transform: translate(17px, 0px);
                 line-height: 28px;
             }
         }
@@ -647,9 +647,115 @@ details summary::-webkit-details-marker {
             margin-top: 35px;
         }
     }
-    .svg-box-mt {
-        position: absolute;
-        top: 3196px;
+    @media (min-width: 541px) {
+        .custom-row {
+            text-align: center;
+        }
+        .description {
+            font-size: 18px;
+            line-height: 36px;
+            letter-spacing: -0.03em;
+            margin-top: 2vw;
+        }
+        .toHide {
+            display: none;
+        }
+        .toShow {
+            display: flex;
+        }
+        .custom-grid {
+            flex-direction: column;
+            padding: 0 10px;
+        }
+        .custom-grid-row {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            color: white;
+            margin-top: -5px;
+            .line-col-right {
+                width: 45%;
+                height: 100px;
+                .steps {
+                    padding-top: 10px;
+                    text-align: left;
+                }
+            }
+            .line-col-left {
+                width: 45%;
+                height: 100px;
+                .steps {
+                    padding-top: 10px;
+                    text-align: right;
+                }
+            }
+            .line-col-center {
+                width: 65px;
+                text-align: center;
+            }
+        }
+    }
+    @media (min-width: 961px) {
+        .steps {
+            h2 {
+                margin-top: -17px;
+            }
+        }
+    }
+    @media (min-width: 1141px) {
+        .custom-row, 
+        .custom-grid {
+            width: 57.8125%;
+            margin: 0 auto;
+        }
+    }
+}
+
+
+
+.photo-processing-before {
+    display: block;
+    position: relative;
+    height: 87vw;
+    background: url('data:image/svg+xml,%3Csvg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%25" height="616.177" viewBox="0 0 1920 616.177" class="svg-before"%3E%3Cpath class="morph-vector" fill="%231B3CC8" d="m 0.35742188,610.98047 v 4.53125 H 1919.6426 v -251.75 C 1725.1344,67.232799 1383.6379,209.21852 868.06445,32.199219 463.62591,-106.66322 128.33171,230.64507 0.35742188,610.98047 Z"%3E%3Canimate attributeName="d" dur="20s" repeatCount="indefinite" values=" m 0.35742188,610.98047 v 4.53125 H 1919.6426 v -251.75 C 1725.1344,67.232799 1383.6379,209.21852 868.06445,32.199219 463.62591,-106.66322 128.33171,230.64507 0.35742188,610.98047 Z; m 0.35742188,610.98051 v 4.53125 H 1919.6426 v -251.75 C 1846.6209,23.844815 1215.9402,210.73413 700.36674,33.714823 295.9282,-105.14761 6.8452542,226.30631 0.35742188,610.98051 Z; m 0.35742188,610.98047 v 4.53125 H 1919.6426 v -251.75 C 1725.1344,67.232799 1383.6379,209.21852 868.06445,32.199219 463.62591,-106.66322 128.33171,230.64507 0.35742188,610.98047 Z " /%3E%3C/path%3E%3C/svg%3E') no-repeat;
+    background-size: auto 87vw;
+    background-position: center top;
+    z-index: -1;
+}
+.photo-processing-after {
+    display: block;
+    position: relative;
+    height: 87vw;
+    background: url('data:image/svg+xml,%3Csvg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%25" height="617" viewBox="0 1023 1920 617" class="svg-after"%3E%3Cpath class="morph-vector" fill="%231B3CC8" d="M 1919.4902,1255.3457 V 1024.334 H 0.50976562 v 181.3965 c 1.76664198,3.6876 3.52237828,7.3833 5.37695318,11.0097 C 161.86517,1521.7402 390.962,1403.21 921.5,1598 c 69.97175,25.6903 145.3658,39.1775 222.8242,41.4902 h 46.377 c 273.6239,-7.3372 564.4359,-149.4553 728.789,-384.1445 z"%3E%3Canimate attributeName="d" dur="20s" repeatCount="indefinite" values=" M 1919.4902,1255.3457 V 1024.334 H 0.50976562 v 181.3965 c 1.76664198,3.6876 3.52237828,7.3833 5.37695318,11.0097 C 161.86517,1521.7402 390.962,1403.21 921.5,1598 c 69.97175,25.6903 145.3658,39.1775 222.8242,41.4902 h 46.377 c 273.6239,-7.3372 564.4359,-149.4553 728.789,-384.1445 z; M 1919.4902,1255.3457 V 1024.334 H 0.50976562 v 181.3965 c 1.76664198,3.6876 3.52237828,7.3833 5.37695318,11.0097 155.9784512,305 316.8747412,131.9094 847.4127412,326.6994 69.97175,25.6903 233.26874,72.52 310.72714,74.8327 h 46.377 c 475.1944,-20.9774 544.7335,-363.1504 709.0866,-362.9266 z; M 1919.4902,1255.3457 V 1024.334 H 0.50976562 v 181.3965 c 1.76664198,3.6876 3.52237828,7.3833 5.37695318,11.0097 C 161.86517,1521.7402 390.962,1403.21 921.5,1598 c 69.97175,25.6903 145.3658,39.1775 222.8242,41.4902 h 46.377 c 273.6239,-7.3372 564.4359,-149.4553 728.789,-384.1445 z " /%3E%3C/path%3E%3C/svg%3E') no-repeat;
+    background-size: auto 87vw;
+    background-position: center bottom;
+    z-index: -1;
+}
+@media (min-width: 541px) {
+    .photo-processing {
+        margin: -40vw 0;
+    }
+}
+
+@media (min-width: 721px) {
+    .photo-processing-before {
+        height: 65vw;
+        background-size: auto 48vw;
+    }
+    .photo-processing-after {
+        height: 75vw;
+        background-size: auto 48vw;
+    }
+}
+
+@media (min-width: 1141px) {
+    .photo-processing-before {
+        height: 60vw;
+        background-size: auto 37vw;
+    }
+    .photo-processing-after {
+        height: 59vw;
+        background-size: auto 36vw;
     }
 }
 
