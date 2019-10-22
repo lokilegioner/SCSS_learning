@@ -198,8 +198,8 @@ nav {
           align-items: center;
 }
 #for-drop-menu-js header nav .content .img-block {
-  display: inline-block;
-  margin-top: 0px;
+  display: block;
+  margin-top: 0vh;
 }
 #for-drop-menu-js header nav .content .bg-logo {
   background: url(../image-svg/mobile-logo.svg);
@@ -609,12 +609,24 @@ details summary::-webkit-details-marker {
     text-align: center;
   }
 }
-.cage-content .svg-box-mt {
-  display: block;
-  position: absolute;
-  top: 1580px;
-  left: 0;
-  z-index: -1;
+.cage-content .cage-slider-for {
+  width: 50%;
+  margin: 20px auto;
+  z-index: 100;
+}
+.cage-content .cage-slider-for .nav-img.slick-slide {
+  height: 530px;
+  z-index: 100;
+}
+.cage-content .cage-slider-nav {
+  margin-top: -550px;
+}
+.cage-content .cage-slider-nav .nav-img {
+  padding: 0 6px;
+}
+.cage-content .cage-slider-nav .nav-img.slick-slide {
+  height: 530px;
+  z-index: 0;
 }
 
 @media (min-width: 321px) {
@@ -852,8 +864,7 @@ details summary::-webkit-details-marker {
   height: 60px;
   border: 0;
   background: #164BC9;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border-radius: 30px;
   padding-left: 21px;
   margin-top: 10px;
@@ -870,9 +881,6 @@ details summary::-webkit-details-marker {
 .form-contact-us .windowInput:-ms-input-placeholder {
   color: #8aa5e4;
 }
-.form-contact-us .windowInput::-ms-input-placeholder {
-  color: #8aa5e4;
-}
 .form-contact-us .windowInput::placeholder {
   color: #8aa5e4;
 }
@@ -884,8 +892,7 @@ details summary::-webkit-details-marker {
   height: 120px;
   border: 0;
   background: #164BC9;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border-radius: 30px;
   padding: 10px 20px;
   margin-top: 10px;
@@ -903,9 +910,6 @@ details summary::-webkit-details-marker {
   color: #8aa5e4;
 }
 .form-contact-us .windowArea:-ms-input-placeholder {
-  color: #8aa5e4;
-}
-.form-contact-us .windowArea::-ms-input-placeholder {
   color: #8aa5e4;
 }
 .form-contact-us .windowArea::placeholder {

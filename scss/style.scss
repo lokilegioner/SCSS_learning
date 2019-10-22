@@ -177,8 +177,8 @@ nav {
                 justify-content: space-between;
                 align-items: center;
                 .img-block {
-                    display: inline-block;
-                    margin-top: 0px;
+                    display: block;
+                    margin-top: 0vh;
                 }
                 .bg-logo {
                     background: url(../image-svg/mobile-logo.svg);
@@ -541,23 +541,27 @@ details summary::-webkit-details-marker {
             text-align: center;
         }
     }
-    // @media (min-width: 961px) {
-    //     .toHide {
-    //         display: none;
-    //     }
-    //     .toShow {
-    //         display: block;
-    //     }
-    //     h2 {
-    //         text-align: center;
-    //     }
-    // }
-    .svg-box-mt {
-        display: block;
-        position: absolute;
-        top: 1580px;
-        left: 0;
-        z-index: -1;
+    .cage-slider-for {
+        width: 50%;
+        margin: 20px auto;
+        z-index: 100;
+        .nav-img {
+            // padding: 0 3px;
+            &.slick-slide {
+                height: 530px;
+                z-index: 100;
+            }
+        }
+    }
+    .cage-slider-nav {
+        margin-top: -550px;
+        .nav-img {
+            padding: 0 6px;
+            &.slick-slide {
+                height: 530px;
+                z-index: 0;
+            }
+        }
     }
 }
 @media (min-width: 321px) {
