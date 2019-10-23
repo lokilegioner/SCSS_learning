@@ -985,8 +985,7 @@ details summary::-webkit-details-marker {
   height: 60px;
   border: 0;
   background: #164BC9;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border-radius: 30px;
   padding-left: 21px;
   margin-top: 10px;
@@ -1003,9 +1002,6 @@ details summary::-webkit-details-marker {
 .form-contact-us .windowInput:-ms-input-placeholder {
   color: #8aa5e4;
 }
-.form-contact-us .windowInput::-ms-input-placeholder {
-  color: #8aa5e4;
-}
 .form-contact-us .windowInput::placeholder {
   color: #8aa5e4;
 }
@@ -1017,8 +1013,7 @@ details summary::-webkit-details-marker {
   height: 120px;
   border: 0;
   background: #164BC9;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border-radius: 30px;
   padding: 10px 20px;
   margin-top: 10px;
@@ -1036,9 +1031,6 @@ details summary::-webkit-details-marker {
   color: #8aa5e4;
 }
 .form-contact-us .windowArea:-ms-input-placeholder {
-  color: #8aa5e4;
-}
-.form-contact-us .windowArea::-ms-input-placeholder {
   color: #8aa5e4;
 }
 .form-contact-us .windowArea::placeholder {
@@ -1194,6 +1186,10 @@ details summary::-webkit-details-marker {
   }
 }
 @media (min-width: 721px) {
+  .form-contact-us:after {
+    background-size: auto;
+    height: 240px;
+  }
   .form-contact-us-before {
     height: 17vw;
     background-size: auto 17vw;

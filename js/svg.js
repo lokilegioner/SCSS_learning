@@ -1,59 +1,48 @@
-// let pointers = document.querySelectorAll('.waySvgBox'),
-//     arrBox = [];
-//     centerPoints = [];
-//     circleStrokes = [];
-//     linesDown = [];
 
-//     for (let i = 0; i < 4; i++) {
-//       arrBox.push(Snap(pointers[i]));
-//       centerPoints.push(arrBox[i].circle(32.5, 25, 10));
-//       centerPoints[i].attr({
-//         fill: "white",
-//         stroke: "none",
-//         strokeWidth: 0
-//       });
-//       circleStrokes.push(arrBox[i].circle(32.5, 25, 23));
-//       circleStrokes[i].attr({
-//         fill: "none",
-//         stroke: "white",
-//         strokeWidth: 3
-//       });
-//       linesDown.push(arrBox[i].line(32.5, 49, 32.5, 196));
-//       linesDown[i].attr({
-//         stroke: "white",
-//         strokeWidth: 2,
-//         strokeDasharray: "10, 137",
-//         strokeDashoffset: "0"
-//       });
+let pointers = document.querySelectorAll('.waySvgBox');
+    arrBox = [];
+    centerPoints = [];
+    circleStrokes = [];
+    linesDown = [];
+    myAnimation = [];
 
-//       Snap.animate([10,137], [147, 0], function( value ) {
-//         linesDown[i].attr({ 'stroke-dasharray': value[0] + ', ' + value[1]});
-//       }, 2000);
-//     }
+    for (let i = 0; i < 5; i++) {
+      arrBox[i] = Snap(pointers[i]);
+      centerPoints[i] = arrBox[i].circle(32.5, 25, 10);
+      centerPoints[i].attr({
+        fill: "white",
+        stroke: "none",
+        strokeWidth: 0
+      });
+
+      circleStrokes[i] = arrBox[i].circle(32.5, 25, 23);
+      circleStrokes[i].attr({
+        fill: "none",
+        stroke: "white",
+        strokeWidth: 3
+      });
+
+      if (i < 4) {
+        linesDown[i] = arrBox[i].line(32.5, 49, 32.5, 196);
+        linesDown[i].attr({
+        stroke: "white",
+        strokeWidth: 2,
+        strokeDasharray: "10, 137",
+        strokeDashoffset: "0"
+      });
+      }
+    }
 
 
-    d = Snap('#decor');
-    centerPoint = d.circle(32.5, 25, 10);
-    centerPoint.attr({
-      fill: "white",
-      stroke: "none",
-      strokeWidth: 0
-    });
-    circleStroke = d.circle(32.5, 25, 23);
-    circleStroke.attr({
-      fill: "none",
-      stroke: "white",
-      strokeWidth: 3
-    });
-    lineDown = d.line(32.5, 49, 32.5, 196);
-    lineDown.attr({
-      stroke: "white",
-      strokeWidth: 2,
-      strokeDasharray: "10, 137",
-      strokeDashoffset: "0"
-    });
+    document.body.onload = function () {
+      for (let i = 0; i < 4; i++) {
+        Snap.animate([10,137], [147, 0], function( value ) {
+          linesDown[i].attr({ 'stroke-dasharray': value[0] + ', ' + value[1]});
+        }, 2000);
+      }
+    };
 
-let s = Snap('#figure'),
+let s = Snap('#figure');
     bottomPlace = 40;
 
     widthWindow = document.documentElement.clientWidth;
@@ -177,10 +166,14 @@ var Visible = function (target) {
       }, 2000);
       animDiagramComplete = true;
     }
+
+
     if (target == step01 && viewIcon && animDecorComplete == false) {
-      Snap.animate([10,137], [147, 0], function( value ) {
-        lineDown.attr({ 'stroke-dasharray': value[0] + ', ' + value[1]});
-      }, 2000);
+      // Snap.animate([10,137], [147, 0], function( value ) {
+      //   lineDown.attr({ 'stroke-dasharray': value[0] + ', ' + value[1]});
+      // }, 2000);
+
+      
       animDecorComplete = true;
       // console.log(lineDown.getBBox());
     }

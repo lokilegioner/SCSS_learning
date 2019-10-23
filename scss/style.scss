@@ -1086,6 +1086,10 @@ details summary::-webkit-details-marker {
 }
 @media (min-width: 721px) {
     .form-contact-us {
+        &:after {
+            background-size: auto;
+            height: 240px;
+        }
         &-before {
             height: 17vw;
             background-size: auto 17vw;
