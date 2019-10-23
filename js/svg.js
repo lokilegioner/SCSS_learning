@@ -1,4 +1,38 @@
-let d = Snap('#decor');
+// let pointers = document.querySelectorAll('.waySvgBox'),
+//     arrBox = [];
+//     centerPoints = [];
+//     circleStrokes = [];
+//     linesDown = [];
+
+//     for (let i = 0; i < 4; i++) {
+//       arrBox.push(Snap(pointers[i]));
+//       centerPoints.push(arrBox[i].circle(32.5, 25, 10));
+//       centerPoints[i].attr({
+//         fill: "white",
+//         stroke: "none",
+//         strokeWidth: 0
+//       });
+//       circleStrokes.push(arrBox[i].circle(32.5, 25, 23));
+//       circleStrokes[i].attr({
+//         fill: "none",
+//         stroke: "white",
+//         strokeWidth: 3
+//       });
+//       linesDown.push(arrBox[i].line(32.5, 49, 32.5, 196));
+//       linesDown[i].attr({
+//         stroke: "white",
+//         strokeWidth: 2,
+//         strokeDasharray: "10, 137",
+//         strokeDashoffset: "0"
+//       });
+
+//       Snap.animate([10,137], [147, 0], function( value ) {
+//         linesDown[i].attr({ 'stroke-dasharray': value[0] + ', ' + value[1]});
+//       }, 2000);
+//     }
+
+
+    d = Snap('#decor');
     centerPoint = d.circle(32.5, 25, 10);
     centerPoint.attr({
       fill: "white",
@@ -20,71 +54,81 @@ let d = Snap('#decor');
     });
 
 let s = Snap('#figure'),
-    mtElemnts = 68,
+    bottomPlace = 40;
+
     widthWindow = document.documentElement.clientWidth;
     console.log('window width: ' + widthWindow + 'px');
 
-    diagram =  s.circle(widthWindow / 4, mtElemnts, 65);
+let 
+    widthSvgBox = 300;
+    heightSvgBox = widthSvgBox / 2;
+    minPadding = widthSvgBox / 16;
+    radiusDiagram = heightSvgBox / 2 - minPadding;
+    centerY = heightSvgBox / 2;
+    centerX1 = centerY;
+    centerX2 = centerY * 3;
+
+    diagram =  s.circle(centerX1, centerY, radiusDiagram);
     diagram.attr({
         fill: "white",
         stroke: "#E0E0E0",
         strokeWidth: 3
     });
-    diagram2 =  s.circle(widthWindow / 4 * 3, mtElemnts, 65);
+    diagram2 =  s.circle(centerX2, centerY, radiusDiagram);
     diagram2.attr({
         fill: "white",
         stroke: "#E0E0E0",
         strokeWidth: 3
     });
-    description = s.text(widthWindow / 4, mtElemnts, "7-10");
+    description = s.text(centerX1, centerY, "7-10");
     description.attr({
-        x: widthWindow / 4 - description.getBBox().width / 2
+        x: centerX1 - description.getBBox().width / 2
     });
     description.addClass('svg-text');
-    description2 = s.text(widthWindow / 4 *3 , mtElemnts, "10-15");
+    description2 = s.text(centerX2 , centerY, "10-15");
     description2.attr({
-        x: widthWindow / 4 * 3 - description2.getBBox().width / 2
+        x: centerX2 - description2.getBBox().width / 2
     });
     description2.addClass('svg-text');
-    descriptionSec = s.text(widthWindow / 4, mtElemnts + 15, "sec");
+    descriptionSec = s.text(centerX1, centerY + 15, "sec");
     descriptionSec.attr({
-        x: widthWindow / 4 - descriptionSec.getBBox().width / 2,
+        x: centerX1 - descriptionSec.getBBox().width / 2,
     });
     descriptionSec.addClass('svg-text');
-    descriptionSec2 = s.text(widthWindow / 4, mtElemnts + 15, "sec");
+    descriptionSec2 = s.text(centerX1, centerY + 15, "sec");
     descriptionSec2.attr({
-        x: widthWindow / 4 * 3 - descriptionSec2.getBBox().width / 2,
+        x: centerX2 - descriptionSec2.getBBox().width / 2,
     });
     descriptionSec2.addClass('svg-text');
 
 
 
-    diagramBlueProgress = s.circle(widthWindow / 4, mtElemnts, 65);
+    diagramBlueProgress = s.circle(centerX1, centerY, radiusDiagram);
     diagramBlueProgress.attr({
         fill: "none",
         stroke: "#1B3CC8",
-        strokeDasharray: "10, 390",
+        strokeDasharray: "0, 343",
         strokeDashoffset: "90",
         strokeWidth: 5
     });
 
-    diagramBlueProgress2 = s.circle(widthWindow / 4 * 3, mtElemnts, 65);
+    diagramBlueProgress2 = s.circle(centerX2, centerY, radiusDiagram);
     diagramBlueProgress2.attr({
         fill: "none",
         stroke: "#1B3CC8",
-        strokeDasharray: "10, 390",
+        strokeDasharray: "0, 343",
         strokeDashoffset: "90",
         strokeWidth: 5
     });
     
-    descriptionTitle = s.text(widthWindow / 4, mtElemnts * 2 + 30, "Normal accurancy");
+    descriptionTitle = s.text(centerX1, centerY * 2 + 5, "Normal accurancy");
     descriptionTitle.attr({
-        x: widthWindow / 4 - descriptionTitle.getBBox().width / 2 - 10
+        x: centerX1 - descriptionTitle.getBBox().width / 2 - 5
     });
     descriptionTitle.addClass('svg-text');
-    descriptionTitle2 = s.text(widthWindow / 4, mtElemnts * 2 + 30, "High accurancy");
+    descriptionTitle2 = s.text(centerX1, centerY * 2 + 5, "High accurancy");
     descriptionTitle2.attr({
-        x: widthWindow / 4 * 3 - descriptionTitle2.getBBox().width / 2 - 10
+        x: centerX2 - descriptionTitle2.getBBox().width / 2 - 5
     });
     descriptionTitle2.addClass('svg-text');
 
@@ -122,13 +166,13 @@ var Visible = function (target) {
 
     console.log('Вы видите элемент :)' + viewIcon);
     if (viewIcon && animDiagramComplete == false) {
-      Snap.animate([10,390], [350, 50], function( value ) {
+      Snap.animate([0,343], [309, 44], function( value ) {
         diagramBlueProgress.attr({ 'stroke-dasharray': value[0] + ', ' + value[1]});
       }, 2000);
-      Snap.animate(90,140, function( value ){
-        diagramBlueProgress2.attr({ 'strokeDashoffset': value });
-      },2000 );
-      Snap.animate([10,390], [350, 100], function( value ) {
+      // Snap.animate(90,140, function( value ){
+      //   diagramBlueProgress2.attr({ 'strokeDashoffset': value });
+      // },2000 );
+      Snap.animate([0,343], [265, 88], function( value ) {
         diagramBlueProgress2.attr({ 'stroke-dasharray': value[0] + ', ' + value[1]});
       }, 2000);
       animDiagramComplete = true;

@@ -1,4 +1,4 @@
-var viewIcon = false;
+
 
 (function(){ 
 
@@ -15,6 +15,7 @@ var viewIcon = false;
             "reverse":true
         }); 
         myAnimation01.paint();
+
         let el = document.querySelector('#iconapp-blue-mobile');
         let myAnimation = new LazyLinePainter(el, {
           "ease":"easeOutCubic",
@@ -25,8 +26,20 @@ var viewIcon = false;
           "reverse":true
         }); 
         myAnimation.paint();
+
+        // desktop
+
+        let el2 = document.querySelector('#appicon');
+                let myAnimation3 = new LazyLinePainter(el2, {
+                  "ease":"easeInQuad",
+                  "strokeWidth":1,
+                  "strokeOpacity":1,
+                  "strokeColor":"#222F3D",
+                  "strokeCap":"square"
+                }); 
+                myAnimation3.paint(); 
       }
-    }
+    };
 
   })();
 
