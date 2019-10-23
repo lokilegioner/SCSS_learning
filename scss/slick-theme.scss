@@ -11,13 +11,13 @@ $slick-font-path: "./fonts/" !default;
 $slick-font-family: "slick" !default;
 $slick-loader-path: "./" !default;
 $slick-arrow-color: white !default;
-$slick-dot-color: black !default;
+$slick-dot-color: rgb(255, 255, 255) !default;
 $slick-dot-color-active: $slick-dot-color !default;
 $slick-prev-character: "\2190" !default;
 $slick-next-character: "\2192" !default;
 $slick-dot-character: "\2022" !default;
-$slick-dot-size: 6px !default;
-$slick-opacity-default: 0.75 !default;
+$slick-dot-size: 50px !default;
+$slick-opacity-default: 1 !default;
 $slick-opacity-on-hover: 1 !default;
 $slick-opacity-not-active: 0.25 !default;
 
@@ -135,13 +135,13 @@ $slick-opacity-not-active: 0.25 !default;
 }
 
 .slick-dots {
-    position: absolute;
+    // position: absolute;
     bottom: -25px;
     list-style: none;
     display: block;
     text-align: center;
     padding: 0;
-    margin: 0;
+    margin: 50px 0;
     width: 100%;
     li {
         position: relative;

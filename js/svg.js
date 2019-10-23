@@ -5,11 +5,18 @@ let d = Snap('#decor');
       stroke: "none",
       strokeWidth: 0
     });
-    circleStroke = d.circle(32.5, 25, 25);
+    circleStroke = d.circle(32.5, 25, 23);
     circleStroke.attr({
       fill: "none",
       stroke: "white",
-      strokeWidth: 2
+      strokeWidth: 3
+    });
+    lineDown = d.line(32.5, 49, 32.5, 196);
+    lineDown.attr({
+      stroke: "white",
+      strokeWidth: 2,
+      strokeDasharray: "10, 137",
+      strokeDashoffset: "0"
     });
 
 let s = Snap('#figure'),
@@ -83,8 +90,10 @@ let s = Snap('#figure'),
 
     // Получаем нужный элемент
 var element = document.querySelector('#viewer-diagram');
+var step01 = document.querySelector('#decor');
 var viewIcon = false;
-var animComplete = false;
+var animDiagramComplete = false;
+var animDecorComplete = false;
 
 var Visible = function (target) {
   // Все позиции элемента
@@ -107,10 +116,12 @@ var Visible = function (target) {
     targetPosition.right > windowPosition.left && // Если позиция правой стороны элемента больше позиции левой части окна, то элемент виден слева
     targetPosition.left < windowPosition.right) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
     // Если элемент полностью видно, то запускаем следующий код
-    console.clear();
+    
+    // console.clear();
     viewIcon = true;
+
     console.log('Вы видите элемент :)' + viewIcon);
-    if (viewIcon && animComplete == false) {
+    if (viewIcon && animDiagramComplete == false) {
       Snap.animate([10,390], [350, 50], function( value ) {
         diagramBlueProgress.attr({ 'stroke-dasharray': value[0] + ', ' + value[1]});
       }, 2000);
@@ -120,11 +131,18 @@ var Visible = function (target) {
       Snap.animate([10,390], [350, 100], function( value ) {
         diagramBlueProgress2.attr({ 'stroke-dasharray': value[0] + ', ' + value[1]});
       }, 2000);
-      animComplete = true;
+      animDiagramComplete = true;
+    }
+    if (target == step01 && viewIcon && animDecorComplete == false) {
+      Snap.animate([10,137], [147, 0], function( value ) {
+        lineDown.attr({ 'stroke-dasharray': value[0] + ', ' + value[1]});
+      }, 2000);
+      animDecorComplete = true;
+      // console.log(lineDown.getBBox());
     }
   } else {
     // Если элемент не видно, то запускаем этот код
-    console.clear();
+    // console.clear();
     viewIcon = false;
   }
 };
@@ -132,7 +150,9 @@ var Visible = function (target) {
 // Запускаем функцию при прокрутке страницы
 window.addEventListener('scroll', function() {
   Visible (element);
+  Visible (step01);
 });
 
 // А также запустим функцию сразу. А то вдруг, элемент изначально видно
 Visible (element);
+Visible (step01);

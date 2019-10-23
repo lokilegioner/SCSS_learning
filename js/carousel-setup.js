@@ -12,6 +12,7 @@ $('.cage-slider-for').slick({
     slidesToScroll: 1,
     asNavFor: '.cage-slider-for',
     dots: true,
+    arrows: false,
     centerMode: true,
     variableWidth: true,
     zIndex: 2,
