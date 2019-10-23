@@ -1,4 +1,16 @@
-
+let d = Snap('#decor');
+    centerPoint = d.circle(32.5, 25, 10);
+    centerPoint.attr({
+      fill: "white",
+      stroke: "none",
+      strokeWidth: 0
+    });
+    circleStroke = d.circle(32.5, 25, 25);
+    circleStroke.attr({
+      fill: "none",
+      stroke: "white",
+      strokeWidth: 2
+    });
 
 let s = Snap('#figure'),
     mtElemnts = 68,

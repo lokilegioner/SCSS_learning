@@ -599,7 +599,7 @@ details summary::-webkit-details-marker {
   .cage-content .toHide {
     display: none;
   }
-  .cage-content .toShow {
+  .cage-content h2.toShow {
     display: block;
   }
   .cage-content h2 {
@@ -619,14 +619,19 @@ details summary::-webkit-details-marker {
   z-index: 100;
 }
 .cage-content .cage-slider-nav {
-  margin-top: -550px;
+  margin-top: 70px;
 }
 .cage-content .cage-slider-nav .nav-img {
-  padding: 0 6px;
+  padding: 0 75px;
 }
 .cage-content .cage-slider-nav .nav-img.slick-slide {
-  height: 530px;
+  height: 540px;
   z-index: 0;
+}
+@media (min-width: 541px) {
+  .cage-content .cage-slider-nav .nav-img {
+    padding: 0 10px;
+  }
 }
 
 @media (min-width: 321px) {
@@ -864,7 +869,8 @@ details summary::-webkit-details-marker {
   height: 60px;
   border: 0;
   background: #164BC9;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border-radius: 30px;
   padding-left: 21px;
   margin-top: 10px;
@@ -881,6 +887,9 @@ details summary::-webkit-details-marker {
 .form-contact-us .windowInput:-ms-input-placeholder {
   color: #8aa5e4;
 }
+.form-contact-us .windowInput::-ms-input-placeholder {
+  color: #8aa5e4;
+}
 .form-contact-us .windowInput::placeholder {
   color: #8aa5e4;
 }
@@ -892,7 +901,8 @@ details summary::-webkit-details-marker {
   height: 120px;
   border: 0;
   background: #164BC9;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border-radius: 30px;
   padding: 10px 20px;
   margin-top: 10px;
@@ -910,6 +920,9 @@ details summary::-webkit-details-marker {
   color: #8aa5e4;
 }
 .form-contact-us .windowArea:-ms-input-placeholder {
+  color: #8aa5e4;
+}
+.form-contact-us .windowArea::-ms-input-placeholder {
   color: #8aa5e4;
 }
 .form-contact-us .windowArea::placeholder {
