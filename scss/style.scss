@@ -1037,9 +1037,17 @@ details summary::-webkit-details-marker {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-between;
+        .toHide {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            width: 90vw;
+            .custom-rowline {
+                text-align: left;
+            }
+        }
         .custom-rowline {
-            text-align: left;
             .listBtn {
                 display: inline;
                 .to-active-color {
@@ -1054,6 +1062,33 @@ details summary::-webkit-details-marker {
             }
         }
     }
+}
+@media (min-width: 321px) {
+    .form-contact-us {
+        .footer {
+            display: flex;
+            flex-direction: column;
+            .custom-rowline {
+                width: 90vw;
+                margin: 0 auto;
+                text-align: center;
+            }
+            .toHide {
+                display: none;
+            }
+            .toShow {
+                display: flex;
+                flex: {
+                    direction: row;
+                    wrap: nowrap;
+                }
+                width: 90vw;
+                .listBtn {
+                    text-align: center;
+                }
+            }
+        }
+    }  
 }
 @media (min-width: 541px) {
     .form-contact-us {

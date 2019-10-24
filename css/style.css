@@ -1125,16 +1125,28 @@ details summary::-webkit-details-marker {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 .form-contact-us .footer * {
   font-weight: 500;
   font-size: 14px;
   line-height: 28px;
 }
-.form-contact-us .footer .custom-rowline {
+.form-contact-us .footer .toHide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 90vw;
+}
+.form-contact-us .footer .toHide .custom-rowline {
   text-align: left;
 }
 .form-contact-us .footer .custom-rowline .listBtn {
@@ -1150,6 +1162,40 @@ details summary::-webkit-details-marker {
   font-size: 13.8px;
 }
 
+@media (min-width: 321px) {
+  .form-contact-us .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .form-contact-us .footer .custom-rowline {
+    width: 90vw;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .form-contact-us .footer .toHide {
+    display: none;
+  }
+  .form-contact-us .footer .toShow {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    width: 90vw;
+  }
+  .form-contact-us .footer .toShow .listBtn {
+    text-align: center;
+  }
+}
 @media (min-width: 541px) {
   .form-contact-us:after {
     background-size: auto 175px;
