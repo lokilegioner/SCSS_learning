@@ -38,25 +38,13 @@ nav {
 
 @keyframes arrowBtnShake {
     from {
-        margin-left: 36px;
+        right: 36px;
     }
     50% {
-        margin-left: 41px;
+        right: 41px;
     }
     to {
-        margin-left: 36px;
-    }
-}
-
-@keyframes arrowBtnShake2 {
-    from {
-        margin-left: 165px;
-    }
-    50% {
-        margin-left: 170px;
-    }
-    to {
-        margin-left: 165px;
+        right: 36px;
     }
 }
 
@@ -106,6 +94,7 @@ nav {
 
 .click-down {
     display: inline-block;
+    position: relative;
     background: transparent;
     border: 2px solid $border-color;
     border-radius: 50px;
@@ -114,15 +103,16 @@ nav {
     text-decoration: none;
     margin-bottom: 30px;
     margin-top: 20px;
-    .click-down-text {
+    &-text {
         @extend %bold;
         display: inline-block;
+        position: absolute;
         font-size: 20px;
         line-height: 30px;
         color: white;
         text-align: left;
-        margin-top: 13px;
-        margin-left: 31px;
+        top: 13px;
+        left: 31px;
     }
 }
 
@@ -305,18 +295,19 @@ nav {
                 }
             }
             .click-down {
-                .click-down-text::after {
+                &:after {
                     background-image: url(../image-svg/icon-arrow.svg);
                     background-size: 20px 20px;
                     display: inline-block;
+                    position: absolute;
                     width: 20px; 
                     height: 20px;
-                    transform:translate(0, 4px);
-                    margin-left: 36px;
+                    right: 36px;
+                    top: 20px;
                     content:"";
                 }
             }
-            .click-down:hover .click-down-text::after {
+            .click-down:hover:after {
                 animation-name: arrowBtnShake;
                 animation-duration: 1s;
                 animation-timing-function: ease-in-out;
@@ -342,18 +333,16 @@ nav {
     }
 }
 
-@-moz-document url-prefix() {
-    .content {
-        .click-down {
-            .click-down-text::after {
-                animation-name: arrowBtnShake;
-                animation-duration: 1s;
-                animation-timing-function: ease-in-out;
-                animation-iteration-count: infinite;
-            }
-        }
-    }
-}
+// @-moz-document url-prefix() {
+//     .content {
+//         .click-down::after {
+//                 animation-name: arrowBtnShake;
+//                 animation-duration: 1s;
+//                 animation-timing-function: ease-in-out;
+//                 animation-iteration-count: infinite;
+//         }
+//     }
+// }
 
 .drop-menu-details {
     display: block;
@@ -958,14 +947,15 @@ details summary::-webkit-details-marker {
         }
         .click-down {
             width: 100%;
-            .click-down-text::after {
+            &::after {
                 background-image: url(../image-svg/icon-arrow.svg);
                 background-size: 20px 20px;
                 display: inline-block;
+                position: absolute;
                 width: 20px; 
                 height: 20px;
-                transform:translate(0,3px);
-                margin-left: 54vw;
+                top: 20px;
+                right: 36px;
                 content:"";
             }
         }
@@ -979,8 +969,8 @@ details summary::-webkit-details-marker {
             .click-down {
                 width: 50%;
                 margin: 0 auto;
-                .click-down-text:after {
-                    margin-left: 35vw;
+                &::after {
+                    right: 35px;
                 }
                 
             }
@@ -989,18 +979,18 @@ details summary::-webkit-details-marker {
             .click-down {
                 width: 28%;
                 margin: 0 auto;
-                .click-down-text:after {
-                    margin-left: 17vw;
+                &::after {
+                    right: 35px;
                 }
                 
             }
         }
-        .click-down:hover .click-down-text::after {
-            animation-name: arrowBtnShake2;
+            .click-down::hover .click-down::after {
+            animation-name: arrowBtnShake;
             animation-duration: 1s;
             animation-timing-function: ease-in-out;
             animation-iteration-count: infinite;
-        }
+            }
         .img-block {
             margin-top: 20px;
             margin-left: 160px;
@@ -1100,8 +1090,8 @@ details summary::-webkit-details-marker {
 @-moz-document url-prefix() {
     .custom-row {
         .click-down {
-            .click-down-text::after {
-                animation-name: arrowBtnShake2;
+            &::after {
+                animation-name: arrowBtnShake;
                 animation-duration: 1s;
                 animation-timing-function: ease-in-out;
                 animation-iteration-count: infinite;

@@ -3,7 +3,7 @@
   padding: 0;
 }
 
-h1, h2, .description, .click-down .click-down-text, .listBtn, .algorithm-processing .cage-content .custom-row .svg-diagram .svg-text, .form-contact-us .windowInput, .form-contact-us .windowArea, .form-contact-us .footer * {
+h1, h2, .description, .click-down-text, .listBtn, .algorithm-processing .cage-content .custom-row .svg-diagram .svg-text, .form-contact-us .windowInput, .form-contact-us .windowArea, .form-contact-us .footer * {
   font-family: Roboto Mono;
   font-style: normal;
   font-weight: bold;
@@ -34,47 +34,25 @@ nav {
 
 @-webkit-keyframes arrowBtnShake {
   from {
-    margin-left: 36px;
+    right: 36px;
   }
   50% {
-    margin-left: 41px;
+    right: 41px;
   }
   to {
-    margin-left: 36px;
+    right: 36px;
   }
 }
 
 @keyframes arrowBtnShake {
   from {
-    margin-left: 36px;
+    right: 36px;
   }
   50% {
-    margin-left: 41px;
+    right: 41px;
   }
   to {
-    margin-left: 36px;
-  }
-}
-@-webkit-keyframes arrowBtnShake2 {
-  from {
-    margin-left: 165px;
-  }
-  50% {
-    margin-left: 170px;
-  }
-  to {
-    margin-left: 165px;
-  }
-}
-@keyframes arrowBtnShake2 {
-  from {
-    margin-left: 165px;
-  }
-  50% {
-    margin-left: 170px;
-  }
-  to {
-    margin-left: 165px;
+    right: 36px;
   }
 }
 .link-font {
@@ -123,6 +101,7 @@ nav {
 
 .click-down {
   display: inline-block;
+  position: relative;
   background: transparent;
   border: 2px solid #164BC9;
   border-radius: 50px;
@@ -132,14 +111,15 @@ nav {
   margin-bottom: 30px;
   margin-top: 20px;
 }
-.click-down .click-down-text {
+.click-down-text {
   display: inline-block;
+  position: absolute;
   font-size: 20px;
   line-height: 30px;
   color: white;
   text-align: left;
-  margin-top: 13px;
-  margin-left: 31px;
+  top: 13px;
+  left: 31px;
 }
 
 .toHide {
@@ -335,18 +315,18 @@ nav {
     display: block;
   }
 }
-#for-drop-menu-js .content .custom-col .click-down .click-down-text::after {
+#for-drop-menu-js .content .custom-col .click-down:after {
   background-image: url(../image-svg/icon-arrow.svg);
   background-size: 20px 20px;
   display: inline-block;
+  position: absolute;
   width: 20px;
   height: 20px;
-  -webkit-transform: translate(0, 4px);
-          transform: translate(0, 4px);
-  margin-left: 36px;
+  right: 36px;
+  top: 20px;
   content: "";
 }
-#for-drop-menu-js .content .custom-col .click-down:hover .click-down-text::after {
+#for-drop-menu-js .content .custom-col .click-down:hover:after {
   -webkit-animation-name: arrowBtnShake;
           animation-name: arrowBtnShake;
   -webkit-animation-duration: 1s;
@@ -375,14 +355,6 @@ nav {
   }
 }
 
-@-moz-document url-prefix() {
-  .content .click-down .click-down-text::after {
-    animation-name: arrowBtnShake;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-  }
-}
 .drop-menu-details {
   display: block;
 }
@@ -985,7 +957,8 @@ details summary::-webkit-details-marker {
   height: 60px;
   border: 0;
   background: #164BC9;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border-radius: 30px;
   padding-left: 21px;
   margin-top: 10px;
@@ -1002,6 +975,9 @@ details summary::-webkit-details-marker {
 .form-contact-us .windowInput:-ms-input-placeholder {
   color: #8aa5e4;
 }
+.form-contact-us .windowInput::-ms-input-placeholder {
+  color: #8aa5e4;
+}
 .form-contact-us .windowInput::placeholder {
   color: #8aa5e4;
 }
@@ -1013,7 +989,8 @@ details summary::-webkit-details-marker {
   height: 120px;
   border: 0;
   background: #164BC9;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border-radius: 30px;
   padding: 10px 20px;
   margin-top: 10px;
@@ -1031,6 +1008,9 @@ details summary::-webkit-details-marker {
   color: #8aa5e4;
 }
 .form-contact-us .windowArea:-ms-input-placeholder {
+  color: #8aa5e4;
+}
+.form-contact-us .windowArea::-ms-input-placeholder {
   color: #8aa5e4;
 }
 .form-contact-us .windowArea::placeholder {
@@ -1056,15 +1036,15 @@ details summary::-webkit-details-marker {
 .form-contact-us .custom-row .click-down {
   width: 100%;
 }
-.form-contact-us .custom-row .click-down .click-down-text::after {
+.form-contact-us .custom-row .click-down::after {
   background-image: url(../image-svg/icon-arrow.svg);
   background-size: 20px 20px;
   display: inline-block;
+  position: absolute;
   width: 20px;
   height: 20px;
-  -webkit-transform: translate(0, 3px);
-          transform: translate(0, 3px);
-  margin-left: 54vw;
+  top: 20px;
+  right: 36px;
   content: "";
 }
 @media (min-width: 541px) {
@@ -1078,8 +1058,8 @@ details summary::-webkit-details-marker {
     width: 50%;
     margin: 0 auto;
   }
-  .form-contact-us .custom-row .click-down .click-down-text:after {
-    margin-left: 35vw;
+  .form-contact-us .custom-row .click-down::after {
+    right: 35px;
   }
 }
 @media (min-width: 1141px) {
@@ -1087,13 +1067,13 @@ details summary::-webkit-details-marker {
     width: 28%;
     margin: 0 auto;
   }
-  .form-contact-us .custom-row .click-down .click-down-text:after {
-    margin-left: 17vw;
+  .form-contact-us .custom-row .click-down::after {
+    right: 35px;
   }
 }
-.form-contact-us .custom-row .click-down:hover .click-down-text::after {
-  -webkit-animation-name: arrowBtnShake2;
-          animation-name: arrowBtnShake2;
+.form-contact-us .custom-row .click-down::hover .click-down::after {
+  -webkit-animation-name: arrowBtnShake;
+          animation-name: arrowBtnShake;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
   -webkit-animation-timing-function: ease-in-out;
@@ -1196,8 +1176,8 @@ details summary::-webkit-details-marker {
   }
 }
 @-moz-document url-prefix() {
-  .custom-row .click-down .click-down-text::after {
-    animation-name: arrowBtnShake2;
+  .custom-row .click-down::after {
+    animation-name: arrowBtnShake;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
