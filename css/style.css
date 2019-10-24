@@ -110,6 +110,7 @@ nav {
   text-decoration: none;
   margin-bottom: 30px;
   margin-top: 20px;
+  z-index: 100;
 }
 .click-down-text {
   display: inline-block;
@@ -1047,6 +1048,16 @@ details summary::-webkit-details-marker {
   right: 36px;
   content: "";
 }
+.form-contact-us .custom-row .click-down:hover:after {
+  -webkit-animation-name: arrowBtnShake;
+          animation-name: arrowBtnShake;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
 @media (min-width: 541px) {
   .form-contact-us .custom-row .click-down {
     width: 80%;
@@ -1058,28 +1069,12 @@ details summary::-webkit-details-marker {
     width: 50%;
     margin: 0 auto;
   }
-  .form-contact-us .custom-row .click-down::after {
-    right: 35px;
-  }
 }
 @media (min-width: 1141px) {
   .form-contact-us .custom-row .click-down {
     width: 28%;
     margin: 0 auto;
   }
-  .form-contact-us .custom-row .click-down::after {
-    right: 35px;
-  }
-}
-.form-contact-us .custom-row .click-down::hover .click-down::after {
-  -webkit-animation-name: arrowBtnShake;
-          animation-name: arrowBtnShake;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
 }
 .form-contact-us .custom-row .img-block {
   margin-top: 20px;
@@ -1173,14 +1168,6 @@ details summary::-webkit-details-marker {
   .form-contact-us-before {
     height: 17vw;
     background-size: auto 17vw;
-  }
-}
-@-moz-document url-prefix() {
-  .custom-row .click-down::after {
-    animation-name: arrowBtnShake;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
   }
 }
 .custom-row {

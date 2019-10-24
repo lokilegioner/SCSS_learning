@@ -103,6 +103,7 @@ nav {
     text-decoration: none;
     margin-bottom: 30px;
     margin-top: 20px;
+    z-index: 100;
     &-text {
         @extend %bold;
         display: inline-block;
@@ -959,6 +960,12 @@ details summary::-webkit-details-marker {
                 content:"";
             }
         }
+        .click-down:hover:after {
+            animation-name: arrowBtnShake;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+        }
         @media (min-width: 541px) {
             .click-down {
                 width: 80%;
@@ -968,29 +975,15 @@ details summary::-webkit-details-marker {
         @media (min-width: 961px) {
             .click-down {
                 width: 50%;
-                margin: 0 auto;
-                &::after {
-                    right: 35px;
-                }
-                
+                margin: 0 auto; 
             }
         }
         @media (min-width: 1141px) {
             .click-down {
                 width: 28%;
-                margin: 0 auto;
-                &::after {
-                    right: 35px;
-                }
-                
+                margin: 0 auto; 
             }
         }
-            .click-down::hover .click-down::after {
-            animation-name: arrowBtnShake;
-            animation-duration: 1s;
-            animation-timing-function: ease-in-out;
-            animation-iteration-count: infinite;
-            }
         .img-block {
             margin-top: 20px;
             margin-left: 160px;
@@ -1087,18 +1080,18 @@ details summary::-webkit-details-marker {
     }  
 }
 
-@-moz-document url-prefix() {
-    .custom-row {
-        .click-down {
-            &::after {
-                animation-name: arrowBtnShake;
-                animation-duration: 1s;
-                animation-timing-function: ease-in-out;
-                animation-iteration-count: infinite;
-            }
-        }
-    }
-}
+// @-moz-document url-prefix() {
+//     .custom-row {
+//         .click-down {
+//             &::after {
+//                 animation-name: arrowBtnShake;
+//                 animation-duration: 1s;
+//                 animation-timing-function: ease-in-out;
+//                 animation-iteration-count: infinite;
+//             }
+//         }
+//     }
+// }
 
 .custom-row {
     padding: 10px;
