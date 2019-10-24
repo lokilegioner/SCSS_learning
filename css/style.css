@@ -1171,6 +1171,9 @@ details summary::-webkit-details-marker {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .form-contact-us .footer .custom-rowline {
     width: 90vw;
@@ -1214,6 +1217,11 @@ details summary::-webkit-details-marker {
   .form-contact-us-before {
     height: 17vw;
     background-size: auto 17vw;
+  }
+}
+@media (min-width: 1141px) {
+  .form-contact-us .footer .toShow {
+    width: 57.8125%;
   }
 }
 .custom-row {
