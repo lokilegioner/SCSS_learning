@@ -197,11 +197,6 @@ nav {
                     width: 28px;
                     height: 23px;
                 }
-                @media (min-width: 721px) {
-                    .toHide {
-                        display: none;
-                    }
-                }
                 @supports (-ms-ime-align: auto) {
                     .drop-menu-details {
                         display: none;
@@ -219,6 +214,9 @@ nav {
                     }
                 }
                 @media (min-width: 721px) {
+                    .toHide {
+                        display: none;
+                    }
                     .toShow {
                         display: block;
                     }
@@ -270,11 +268,6 @@ nav {
                 display: inline;
                 margin-left: 20px;
             }
-            @media (min-width: 721px) {
-                .img-block {
-                    margin-left: 20%;
-                }
-            }
             .img-block:last-child {
                 width: 95%;
                 max-width: 250px;
@@ -289,6 +282,9 @@ nav {
                 }
             }
             @media (min-width: 721px) {
+                .img-block {
+                    margin-left: 20%;
+                }
                 .img-block:last-child {
                     width: 78%;
                     max-width: 396px;
@@ -645,6 +641,10 @@ details summary::-webkit-details-marker {
     @media (min-width: 721px) {
         .cage-content {
             margin: -80px 0;
+            &-before {
+                height: 42vw;
+                background-size: auto 40vw;
+            }
         }
     }
     @media (min-width: 1141px) {

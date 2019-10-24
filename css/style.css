@@ -207,11 +207,6 @@ nav {
   width: 28px;
   height: 23px;
 }
-@media (min-width: 721px) {
-  #for-drop-menu-js header nav .content .toHide {
-    display: none;
-  }
-}
 @supports (-ms-ime-align: auto) {
   #for-drop-menu-js header nav .content .drop-menu-details {
     display: none;
@@ -229,6 +224,9 @@ nav {
   }
 }
 @media (min-width: 721px) {
+  #for-drop-menu-js header nav .content .toHide {
+    display: none;
+  }
   #for-drop-menu-js header nav .content .toShow {
     display: block;
   }
@@ -291,11 +289,6 @@ nav {
   display: inline;
   margin-left: 20px;
 }
-@media (min-width: 721px) {
-  #for-drop-menu-js .content .custom-col .img-block {
-    margin-left: 20%;
-  }
-}
 #for-drop-menu-js .content .custom-col .img-block:last-child {
   width: 95%;
   max-width: 250px;
@@ -310,6 +303,9 @@ nav {
   }
 }
 @media (min-width: 721px) {
+  #for-drop-menu-js .content .custom-col .img-block {
+    margin-left: 20%;
+  }
   #for-drop-menu-js .content .custom-col .img-block:last-child {
     width: 78%;
     max-width: 396px;
@@ -703,6 +699,10 @@ details summary::-webkit-details-marker {
 @media (min-width: 721px) {
   .medical-application .cage-content {
     margin: -80px 0;
+  }
+  .medical-application .cage-content-before {
+    height: 42vw;
+    background-size: auto 40vw;
   }
 }
 @media (min-width: 1141px) {
